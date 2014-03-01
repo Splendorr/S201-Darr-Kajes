@@ -22,7 +22,7 @@ public class WalkerController : MonoBehaviour
 
 			if(Input.GetKey(KeyCode.Q))
 			{
-				rigidbody.addAddForceAtPosition(new Vector3(0, .5f, 0), frontLeft.position);
+				rigidbody.AddForceAtPosition(new Vector3(0, .5f, 0), frontLeft.position);
 			}
 			if(Input.GetKey(KeyCode.E))
 			{
