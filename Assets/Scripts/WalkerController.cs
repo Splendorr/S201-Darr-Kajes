@@ -12,11 +12,13 @@ public class WalkerController : MonoBehaviour
 
 	void FixedUpdate()
 	{
-		if(Input.GetKey(KeyCode.LeftShift))
+		if(Input.GetKey(KeyCode.LeftShift) &&
+		   transform.parent != null)
 		{
 			rigidbody.AddRelativeForce(new Vector3(0, -Physics.gravity.y * rigidbody.mass + rigidbody.drag, rigidbody.mass * 5 * Time.fixedDeltaTime));
 		}
-		else if(!isOnGround)
+		else if(!isOnGround &&
+		        transform.parent != null)
 		{
 			rigidbody.AddRelativeForce(new Vector3(0, (-Physics.gravity.y * rigidbody.mass + rigidbody.drag) * .825f, rigidbody.mass * 5 * Time.fixedDeltaTime));
 
@@ -36,6 +38,11 @@ public class WalkerController : MonoBehaviour
 			{
 				rigidbody.AddForceAtPosition(new Vector3(0, .5f, 0), backRight.position);
 			}
+		}
+		else if(!isOnGround &&
+		        transform.parent == null)
+		{
+			rigidbody.AddForce(new Vector3(0, (Physics.gravity.y * rigidbody.mass + rigidbody.drag) * 2.825f, rigidbody.mass * 5 * Time.fixedDeltaTime));
 		}
 
 	}

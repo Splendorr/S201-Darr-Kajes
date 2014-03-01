@@ -289,7 +289,6 @@ GameObject:
   - 4: {fileID: 358873441}
   - 33: {fileID: 358873440}
   - 65: {fileID: 358873439}
-  - 23: {fileID: 358873438}
   m_Layer: 0
   m_Name: TooFar
   m_TagString: Too Far
@@ -297,28 +296,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!23 &358873438
-Renderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 2300006, guid: 2a1cd2645ec6d4642a6b29b963af362d,
-    type: 2}
-  m_PrefabInternal: {fileID: 899432900}
-  m_GameObject: {fileID: 358873437}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_SortingLayerID: 0
 --- !u!65 &358873439
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -347,8 +324,8 @@ Transform:
   m_PrefabInternal: {fileID: 899432900}
   m_GameObject: {fileID: 358873437}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .0350000001, y: .100000001, z: .0350000001}
+  m_LocalPosition: {x: 0, y: .0199999996, z: 0}
+  m_LocalScale: {x: .0399999991, y: .0199999996, z: .0399999991}
   m_Children: []
   m_Father: {fileID: 360292778}
 --- !u!1 &360292777
@@ -1373,17 +1350,23 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: 2a1cd2645ec6d4642a6b29b963af362d, type: 2}
       propertyPath: m_LocalScale.x
-      value: .0350000001
+      value: .0399999991
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: 2a1cd2645ec6d4642a6b29b963af362d, type: 2}
       propertyPath: m_LocalScale.z
-      value: .0350000001
+      value: .0399999991
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: 2a1cd2645ec6d4642a6b29b963af362d, type: 2}
       propertyPath: m_LocalScale.y
-      value: .100000001
+      value: .0199999996
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 400008, guid: 2a1cd2645ec6d4642a6b29b963af362d, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: .0199999996
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2300006, guid: 2a1cd2645ec6d4642a6b29b963af362d, type: 2}
+    - {fileID: 2300004, guid: 2a1cd2645ec6d4642a6b29b963af362d, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 2a1cd2645ec6d4642a6b29b963af362d, type: 2}
   m_RootGameObject: {fileID: 570459092}
   m_IsPrefabParent: 0
@@ -2951,7 +2934,6 @@ GameObject:
   - 4: {fileID: 1782947565}
   - 33: {fileID: 1782947564}
   - 65: {fileID: 1782947563}
-  - 23: {fileID: 1782947562}
   m_Layer: 0
   m_Name: TooClose
   m_TagString: Too Close
@@ -2959,28 +2941,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!23 &1782947562
-Renderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 2300004, guid: 2a1cd2645ec6d4642a6b29b963af362d,
-    type: 2}
-  m_PrefabInternal: {fileID: 899432900}
-  m_GameObject: {fileID: 1782947561}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_SortingLayerID: 0
 --- !u!65 &1782947563
 BoxCollider:
   m_ObjectHideFlags: 0

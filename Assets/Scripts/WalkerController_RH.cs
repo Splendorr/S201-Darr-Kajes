@@ -7,8 +7,8 @@ public class WalkerController_RH : MonoBehaviour {
 	public float zRotation = 0.0f;
 	public float yRotation = 0.0f;
 	public float speed = 0.0f;
-	private float xPosition;
-	private float zPosition;
+//	private float xPosition;
+//	private float zPosition;
 	
 	public float smoothTime = 0.0F;
 	public float xVelocity = 0.0F;
@@ -16,8 +16,8 @@ public class WalkerController_RH : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		xPosition = transform.position.x;
-		zPosition = transform.position.z;
+//		xPosition = transform.position.x;
+//		zPosition = transform.position.z;
 	}
 	
 	// Update is called once per frame
