@@ -42,6 +42,7 @@ public class ElderlyController : MonoBehaviour
 			rigidbody.AddForce(Vector3.forward * playerSpeed);
 			StartCoroutine(LeftFootCooler());
 		}
+//		rigidbody.
 	}
 
 	IEnumerator RightFootCooler()
