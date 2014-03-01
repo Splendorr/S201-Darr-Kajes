@@ -247,6 +247,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walker: {fileID: 0}
+  rightFootReady: 1
+  leftFootReady: 1
+  playerSpeed: 10
+  footCooldown: .25
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
