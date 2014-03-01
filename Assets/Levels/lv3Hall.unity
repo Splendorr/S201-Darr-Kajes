@@ -279,7 +279,7 @@ GameObject:
   - 23: {fileID: 78090869}
   m_Layer: 0
   m_Name: Floor20x20
-  m_TagString: Untagged
+  m_TagString: floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -877,7 +877,7 @@ GameObject:
   - 23: {fileID: 202017532}
   m_Layer: 0
   m_Name: Floor4x7
-  m_TagString: Untagged
+  m_TagString: floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2363,7 +2363,7 @@ GameObject:
   - 23: {fileID: 550310491}
   m_Layer: 0
   m_Name: Floor4x7
-  m_TagString: Untagged
+  m_TagString: floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3819,7 +3819,7 @@ GameObject:
   - 23: {fileID: 934500211}
   m_Layer: 0
   m_Name: Floor4x7
-  m_TagString: Untagged
+  m_TagString: floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4037,7 +4037,7 @@ GameObject:
   - 23: {fileID: 958507555}
   m_Layer: 0
   m_Name: Floor4x14
-  m_TagString: Untagged
+  m_TagString: floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4930,7 +4930,7 @@ GameObject:
   - 23: {fileID: 1201099031}
   m_Layer: 0
   m_Name: Floor4x7
-  m_TagString: Untagged
+  m_TagString: floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5003,7 +5003,7 @@ GameObject:
   - 23: {fileID: 1259633462}
   m_Layer: 0
   m_Name: Floor4x7
-  m_TagString: Untagged
+  m_TagString: floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6425,7 +6425,7 @@ GameObject:
   - 23: {fileID: 1594213590}
   m_Layer: 0
   m_Name: Floor4x7
-  m_TagString: Untagged
+  m_TagString: floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8026,7 +8026,7 @@ GameObject:
   - 23: {fileID: 1990410282}
   m_Layer: 0
   m_Name: Floor20x20
-  m_TagString: Untagged
+  m_TagString: floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8711,7 +8711,7 @@ GameObject:
   - 23: {fileID: 2100131782}
   m_Layer: 0
   m_Name: Floor4x7
-  m_TagString: Untagged
+  m_TagString: floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

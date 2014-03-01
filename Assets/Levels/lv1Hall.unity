@@ -109,6 +109,10 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: .707106709
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 30d387a4ccce843128e653f24653b0d8, type: 2}
+      propertyPath: m_TagString
+      value: floor
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 30d387a4ccce843128e653f24653b0d8, type: 2}
   m_RootGameObject: {fileID: 1518165266}
@@ -149,6 +153,10 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: .707106709
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 30d387a4ccce843128e653f24653b0d8, type: 2}
+      propertyPath: m_TagString
+      value: floor
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 30d387a4ccce843128e653f24653b0d8, type: 2}
   m_RootGameObject: {fileID: 1399211582}
@@ -167,7 +175,7 @@ GameObject:
   - 23: {fileID: 329455338}
   m_Layer: 0
   m_Name: Floor4x14
-  m_TagString: Untagged
+  m_TagString: floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -262,6 +270,10 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: .707106709
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 30d387a4ccce843128e653f24653b0d8, type: 2}
+      propertyPath: m_TagString
+      value: floor
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 30d387a4ccce843128e653f24653b0d8, type: 2}
   m_RootGameObject: {fileID: 592593422}
@@ -340,6 +352,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isOnGround: 0
+  frontLeft: {fileID: 0}
+  frontRight: {fileID: 0}
+  backLeft: {fileID: 0}
+  backRight: {fileID: 0}
 --- !u!23 &360292782
 Renderer:
   m_ObjectHideFlags: 0
@@ -560,7 +576,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &552652813
 Renderer:
   m_ObjectHideFlags: 0
@@ -691,7 +707,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09836b1aec52c45699e48a0e3c64ed09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walker: {fileID: 0}
+  walker: {fileID: 360292777}
   rightFootReady: 1
   leftFootReady: 1
   playerSpeed: 1000
@@ -769,7 +785,7 @@ GameObject:
   - 23: {fileID: 584086690}
   m_Layer: 0
   m_Name: Floor20x20
-  m_TagString: Untagged
+  m_TagString: floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -842,7 +858,7 @@ GameObject:
   - 23: {fileID: 592593423}
   m_Layer: 0
   m_Name: Floor4x14
-  m_TagString: Untagged
+  m_TagString: floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -979,7 +995,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 2c7f97c02f2f44cfcbb6fa1183319b52, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2c7f97c02f2f44cfcbb6fa1183319b52, type: 2}
@@ -1166,6 +1182,14 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_ConnectedAnchor.y
+      value: .0533472449
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_ConnectedAnchor.z
+      value: -.0262470711
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2a1cd2645ec6d4642a6b29b963af362d, type: 2}
   m_RootGameObject: {fileID: 570459092}
@@ -1279,6 +1303,10 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: .707106709
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 30d387a4ccce843128e653f24653b0d8, type: 2}
+      propertyPath: m_TagString
+      value: floor
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 30d387a4ccce843128e653f24653b0d8, type: 2}
   m_RootGameObject: {fileID: 329455337}
@@ -1362,6 +1390,10 @@ Prefab:
     - target: {fileID: 400000, guid: d57b2a09dc2ce4467a7e94fd56d5869a, type: 2}
       propertyPath: m_LocalRotation.w
       value: .707106709
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d57b2a09dc2ce4467a7e94fd56d5869a, type: 2}
+      propertyPath: m_TagString
+      value: floor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d57b2a09dc2ce4467a7e94fd56d5869a, type: 2}
@@ -2030,7 +2062,7 @@ GameObject:
   - 23: {fileID: 1399211583}
   m_Layer: 0
   m_Name: Floor4x14
-  m_TagString: Untagged
+  m_TagString: floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2365,7 +2397,7 @@ GameObject:
   - 23: {fileID: 1518165267}
   m_Layer: 0
   m_Name: Floor4x14
-  m_TagString: Untagged
+  m_TagString: floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

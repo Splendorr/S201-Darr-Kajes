@@ -87,7 +87,7 @@ GameObject:
   - 23: {fileID: 103988095}
   m_Layer: 0
   m_Name: Floor4x14
-  m_TagString: Untagged
+  m_TagString: floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1285,7 +1285,7 @@ GameObject:
   - 23: {fileID: 1769147691}
   m_Layer: 0
   m_Name: Floor4x14
-  m_TagString: Untagged
+  m_TagString: floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1398,7 +1398,7 @@ GameObject:
   - 23: {fileID: 1946794445}
   m_Layer: 0
   m_Name: Floor4x14
-  m_TagString: Untagged
+  m_TagString: floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

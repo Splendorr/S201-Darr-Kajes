@@ -26,23 +26,32 @@ public class ElderlyController : MonoBehaviour
 
 	void Update()
 	{
-		if (Input.GetKeyDown (KeyCode.X) &&
-		    rightFootReady)
+		if(walker.GetComponent<WalkerController>().isOnGround)
 		{
-			rightFootReady = false;
-			Debug.Log ("Right foot!");
-			rigidbody.AddForce(Vector3.forward * playerSpeed);
-			StartCoroutine(RightFootCooler());
+			rigidbody.useGravity = false;
+			rigidbody.drag = 5;
+			if (Input.GetKeyDown (KeyCode.X) &&
+			    rightFootReady)
+			{
+				rightFootReady = false;
+				Debug.Log ("Right foot!");
+				rigidbody.AddForce(new Vector3(-1f, 0, 1) * playerSpeed);
+				StartCoroutine(RightFootCooler());
+			}
+			else if (Input.GetKeyDown (KeyCode.Z) &&
+			         leftFootReady)
+			{
+				leftFootReady = false;
+				Debug.Log ("Left foot!");
+				rigidbody.AddForce(new Vector3(1f, 0, 1) * playerSpeed);
+				StartCoroutine(LeftFootCooler());
+			}
 		}
-		else if (Input.GetKeyDown (KeyCode.Z) &&
-		         leftFootReady)
+		else
 		{
-			leftFootReady = false;
-			Debug.Log ("Left foot!");
-			rigidbody.AddForce(Vector3.forward * playerSpeed);
-			StartCoroutine(LeftFootCooler());
+			rigidbody.useGravity = true;
+			rigidbody.drag = 50;
 		}
-//		rigidbody.
 	}
 
 	IEnumerator RightFootCooler()

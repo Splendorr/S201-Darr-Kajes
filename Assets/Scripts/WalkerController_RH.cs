@@ -13,7 +13,7 @@ public class WalkerController_RH : MonoBehaviour {
 	public float smoothTime = 0.0F;
 	public float xVelocity = 0.0F;
 	public float zVelocity = 0.0F;
-	private float _cycle = 5.0f;
+//	private float _cycle = 5.0f;
 
 	// Use this for initialization
 	void Start () {
