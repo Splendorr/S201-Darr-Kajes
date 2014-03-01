@@ -35,7 +35,7 @@ public class ElderlyController : MonoBehaviour
 			{
 				rightFootReady = false;
 				Debug.Log ("Right foot!");
-				rigidbody.AddForce(new Vector3(-1f, 0, 1) * playerSpeed);
+				rigidbody.AddForce(new Vector3(1f, 0, 1) * playerSpeed);
 				StartCoroutine(RightFootCooler());
 			}
 			else if (Input.GetKeyDown (KeyCode.Z) &&
@@ -43,7 +43,7 @@ public class ElderlyController : MonoBehaviour
 			{
 				leftFootReady = false;
 				Debug.Log ("Left foot!");
-				rigidbody.AddForce(new Vector3(1f, 0, 1) * playerSpeed);
+				rigidbody.AddForce(new Vector3(-1f, 0, 1) * playerSpeed);
 				StartCoroutine(LeftFootCooler());
 			}
 		}
