@@ -5,7 +5,10 @@ Game Design:
 
 You are an elderly citizen, confined to retirement Facility.
 
+
 ## Controls
+
+
 ### Player 1
 The Walker:  
 Q - Raise Front Left Tennis Ball  
@@ -17,6 +20,7 @@ L Shift - Hold to lift the walker. Release to begin lowering the Walker.
 Your Feet:  
 Z - Shuffle Left Foot Forward  
 X - Shuffle Right Foot Forward
+
 
 ### Player 2
 The Walker:  
@@ -39,6 +43,7 @@ As it lifts and falls, the Walker is subject to various forces, including the ra
 
 Once your Walker is safely on the ground, you can begin shuffling forward by alternating the Feet buttons rapidly. You can shuffle forward as far as the Walker (possibly farther, starting it out off balance?) and then begin to lift again.
 
+
 ## The Bigger Picture
 
 There's a mischievous orderly who comes and switches off the lights every night. When the lights go out, the action heats up for these thrill-seeking geriatrics. Nightly circuits of cut throat races through the barely-lit hallways.
@@ -46,6 +51,7 @@ There's a mischievous orderly who comes and switches off the lights every night.
 In single-player mode, you're just trying to either (a) Make it successfully through a series of levels, or (b) just get as far as you can in an endless(?) mode. In a more-developed version, you might be racing against a group of AI characters, but not in the prototype. Weave your way around obstacles such as chairs, rugs, and the walkers of the fallen, as you go the distance.
 
 In two-player split-screen VS. Mode, go elbow to boney elbow against a friend or nearly-departed frenemy as you race to the finish in fits and starts. Out-maneuver your foe, and leave them choking on your talcum-powder dust.
+
 
 ## We Need:
 - A Good Hallway or Two
@@ -59,17 +65,28 @@ In two-player split-screen VS. Mode, go elbow to boney elbow against a friend or
 - Portraits For Character Select
 - Other stuff I'm sure!
 
+
 # Notes From Talking
+
 
 ## The Elders
 Council of Elders
 The Elder Circuit
 Circuit of Elders
 
+
 ## Gameplay:
+
+### Turning ###
+
 Turn slightly while planted, by shuffling the feet unevenly. Then when you lift, the Walker lifts and orients in front of you, but at an angle, so it's harder to compensate. You should also be able to turn a bit more while the Walker is Lifted, though I'm not quite sure about how to do that yet.
 
-### Throw the walker aside?
+### Slam It ###
+
+Should there be a key (maybe 2 or 9, above the adjustment keys?) to "Tetris Slam" the Walker down, if you're confident that it's aligned properly? This should probably introduce a small amount of variation while slamming, though not enough to make you feel like it's never worth it. Perhaps it just "amplifies" the direction it's currently oriented, so if you're a little askew to the left, it goes *more* to the left before it hits? And if you're moderately off-center when Slamming, it has a much greater risk of shooting out from underneath you and bringing you to the ground.
+
+### Throw the Walker Aside? ###
+
 - Maybe a button to "Let Go" of the Walker, which you might do when (1) Realize you're falling, and then to get the Walker out of the way for when you respawn, or to make it an obstacle for your opponent, you learn to try to chuck it out of the way, or (2) at the very end, perhaps you throw it away and just shuffle/topple forward over the finish line?
 
 Fast & Furious, There's an orderly who turns the lights out,
@@ -86,6 +103,7 @@ Few light sources to illuminate the action
 Or Mario Kart 64-style follow-cam?
 No, First-Person Shuffler
 
+
 ## Slogans / Catchphrases
 - First-Person Shuffler
 - The World's First First-Person Oh-No!
@@ -93,9 +111,11 @@ No, First-Person Shuffler
 - Even when everything else fades away: there's you, your pride... and your walker.
 - Disclaimer: Please take care of your old people.
 
+
 ## Hot Rodded Walkers
 - Fuzzy Dice
 - "The Paul" Walker - The Best Hot Rod Walker
+
 
 ## Characters:
 - UNK, with a barbed-wire covered walker?
@@ -113,6 +133,7 @@ Feronica Valley
 Older Indian names?
 "The Muscle Bustle"
 
+
 ## Power-Ups:
 - Doom Style Brass Knuckles
 - Denture Launcher / Or the Dentures Fall Out
@@ -120,6 +141,7 @@ Older Indian names?
 - Spiked Balls
 - Nightvision Goggles
 - FIND VIAGRA - NEVER FALL DOWN
+
 
 ## Light Sources
 - Christmas Tree
@@ -129,47 +151,13 @@ Older Indian names?
 - Moonlight through the window
 - One of the flickering fluorescents
 
-## How to mark progress?
-- Markers on the floor?
-- Tape Strips
-- Room Numbers (What's going on in the rooms? Skill by turning to look and then getting back around?)
-
-## Misc. Game Ideas:
-In the Major Console Version with upgrades and progression:
-- Lighter or heavier walkers? Walkers with other features?
-- Style of Screws to hold it together?
-- Crossbones & Toupees
-
-
-Pixel Art Ridge Racer Nurses as Flag People, 
-
-Character Select: Family Portraits (Demented Family, Obvious Gaps in the images where the old person used to be, CHARACTER select highlights the old person, then when you select the character, they disappear from the picture, because they've gone to the old folks' home)
-
-
-
-Hot Night Hounds
-
-Paul Walker - Racing Toward The Light At the end of the tunnel
-
-If you get far enough, you walk down a hallway, INTO THE LIGHT
-
-Stairs / Uphill /Downhill
-Elevator Is Out Of Order, dramatic music plays
-
-Depending on Insurance Level, How Many Defibrillators
-
-"Hardcore Mode" - DNR Mode
-
-## Obstacles
-- Chairs
-- Pill Bottles
-- Debris
-- The Walkers Of The Fallen (When you're on the way down in multiplayer, you realize it, and you can try to maneuver the Walker to be an obstacle for your opponent. The Elder disappears and re-spawns with a new Walker, but the previous Walker remains 
 
 ## Music / Sounds
 - Django Reinhardt / Midnight in Paris? Some other spirited Jazzy music?
 - Located in the world, clearly playing softly out of a gramophone, perhaps located near the finish, so it gets louder as you approach.
 - Winner gets to choose the song for the next race.
+- When you slam it down, booming sounds. Even when it just hits the ground, still dramatic big boom sounds.
+- 
 
 ALTERNATE 2P MODE:
 2P is... The Walker. Fighting the player.
@@ -209,3 +197,43 @@ Special Agent Pogo Walker
 Riding the thing and looking down, trying to level our on each bounce
 
 "I'm going to make the foot cool-down a public float." - Tony Ransom
+
+
+## How to mark progress?
+- Markers on the floor?
+- Tape Strips
+- Room Numbers (What's going on in the rooms? Skill by turning to look and then getting back around?)
+
+
+## Misc. Game Ideas:
+In the Major Console Version with upgrades and progression:
+- Lighter or heavier walkers? Walkers with other features?
+- Style of Screws to hold it together?
+- Crossbones & Toupees
+
+
+Pixel Art Ridge Racer Nurses as Flag People, 
+
+Character Select: Family Portraits (Demented Family, Obvious Gaps in the images where the old person used to be, CHARACTER select highlights the old person, then when you select the character, they disappear from the picture, because they've gone to the old folks' home)
+
+
+
+Hot Night Hounds
+
+Paul Walker - Racing Toward The Light At the end of the tunnel
+
+If you get far enough, you walk down a hallway, INTO THE LIGHT
+
+Stairs / Uphill /Downhill
+Elevator Is Out Of Order, dramatic music plays
+
+Depending on Insurance Level, How Many Defibrillators
+
+"Hardcore Mode" - DNR Mode
+
+
+## Obstacles
+- Chairs
+- Pill Bottles
+- Debris
+- The Walkers Of The Fallen (When you're on the way down in multiplayer, you realize it, and you can try to maneuver the Walker to be an obstacle for your opponent. The Elder disappears and re-spawns with a new Walker, but the previous Walker remains 
