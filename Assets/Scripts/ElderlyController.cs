@@ -10,8 +10,10 @@ public class ElderlyController : MonoBehaviour
 	//BOOLS
 
 	//FOOTbools
-	public bool rightFootReady = true;
-	public bool leftFootReady = true;
+	private bool rightFootReady = true;
+	private bool leftFootReady = true;
+
+	private bool touchingWalker = false;
 
 	//FLOATS
 
@@ -29,9 +31,11 @@ public class ElderlyController : MonoBehaviour
 		if(walker.GetComponent<WalkerController>().isOnGround)
 		{
 			rigidbody.useGravity = false;
+			rigidbody.freezeRotation = true;
 			rigidbody.drag = 5;
 			if (Input.GetKeyDown (KeyCode.X) &&
-			    rightFootReady)
+			    rightFootReady &&
+			    !touchingWalker)
 			{
 				rightFootReady = false;
 				Debug.Log ("Right foot!");
@@ -39,7 +43,8 @@ public class ElderlyController : MonoBehaviour
 				StartCoroutine(RightFootCooler());
 			}
 			else if (Input.GetKeyDown (KeyCode.Z) &&
-			         leftFootReady)
+			         leftFootReady &&
+			         !touchingWalker)
 			{
 				leftFootReady = false;
 				Debug.Log ("Left foot!");
@@ -50,8 +55,33 @@ public class ElderlyController : MonoBehaviour
 		else
 		{
 			rigidbody.useGravity = true;
+			rigidbody.freezeRotation = false;
 			rigidbody.drag = 50;
 		}
+	}
+
+	void OnTriggerEnter(Collider col)
+	{
+		if(col.CompareTag("Too Close"))
+		{
+			touchingWalker = true;
+		}
+	}
+	void OnTriggerExit(Collider col)
+	{
+		if(col.CompareTag("Too Close"))
+		{
+			touchingWalker = false;
+		}
+		else if(col.CompareTag ("Too Far"))
+		{
+			DropWalker(walker.transform);
+		}
+	}
+
+	void DropWalker(Transform walkerTrans)
+	{
+		walkerTrans.parent = null;
 	}
 
 	IEnumerator RightFootCooler()

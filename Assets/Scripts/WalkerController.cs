@@ -45,6 +45,7 @@ public class WalkerController : MonoBehaviour
 		if(col.collider.tag == "floor" && Vector3.Angle(transform.up, Vector3.up) < 70)
 		{
 			isOnGround = true;
+			rigidbody.freezeRotation = true;
 		}
 	}
 
@@ -53,6 +54,7 @@ public class WalkerController : MonoBehaviour
 		if(col.collider.tag == "floor")
 		{
 			isOnGround = false;
+			rigidbody.freezeRotation = false;
 		}
 	}
 }
