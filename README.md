@@ -7,27 +7,27 @@ You are an elderly citizen, confined to retirement Facility.
 
 ## Controls
 ### Player 1
-The Walker:
-Q - Raise Front Left Tennis Ball
-E - Raise Front Right Tennis Ball
-A - Raise Rear Left Stopper
-D - Raise Rear Right Stopper
-L Shift - Hold to lift the walker. Release to begin lowering the Walker.
+The Walker:  
+Q - Raise Front Left Tennis Ball  
+E - Raise Front Right Tennis Ball  
+A - Raise Rear Left Stopper  
+D - Raise Rear Right Stopper  
+L Shift - Hold to lift the walker. Release to begin lowering the Walker.  
 
-Your Feet:
-Z - Shuffle Left Foot Forward
+Your Feet:  
+Z - Shuffle Left Foot Forward  
 X - Shuffle Right Foot Forward
 
 ### Player 2
-The Walker:
-U - Raise Front Left Tennis Ball
-O - Raise Front Right Tennis Ball
-J - Raise Rear Left Stopper
-L - Raise Rear Right Stopper
-R Shift - Hold to lift the walker. Release to begin lowering the Walker.
+The Walker:  
+U - Raise Front Left Tennis Ball  
+O - Raise Front Right Tennis Ball  
+J - Raise Rear Left Stopper  
+L - Raise Rear Right Stopper  
+R Shift - Hold to lift the walker. Release to begin lowering the Walker.  
 
-Your Feet:
-M - Shuffle Left Foot Forward
+Your Feet:  
+M - Shuffle Left Foot Forward  
 , - Shuffle Right Foot Forward
 
 
