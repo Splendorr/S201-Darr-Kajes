@@ -560,7 +560,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &552652813
 Renderer:
   m_ObjectHideFlags: 0
@@ -694,7 +694,7 @@ MonoBehaviour:
   walker: {fileID: 0}
   rightFootReady: 1
   leftFootReady: 1
-  playerSpeed: 10
+  playerSpeed: 10000
   footCooldown: .25
 --- !u!23 &570459095
 Renderer:
@@ -727,7 +727,7 @@ Rigidbody:
   m_GameObject: {fileID: 570459092}
   serializedVersion: 2
   m_Mass: 100
-  m_Drag: 100
+  m_Drag: 50
   m_AngularDrag: .0500000007
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -977,6 +977,10 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 2c7f97c02f2f44cfcbb6fa1183319b52, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2c7f97c02f2f44cfcbb6fa1183319b52, type: 2}
   m_RootGameObject: {fileID: 552652812}
@@ -1161,6 +1165,14 @@ Prefab:
     - target: {fileID: 400000, guid: 2a1cd2645ec6d4642a6b29b963af362d, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 2a1cd2645ec6d4642a6b29b963af362d, type: 2}
+      propertyPath: playerSpeed
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 2a1cd2645ec6d4642a6b29b963af362d, type: 2}
+      propertyPath: m_Drag
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2a1cd2645ec6d4642a6b29b963af362d, type: 2}
