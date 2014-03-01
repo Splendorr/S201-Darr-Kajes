@@ -13,9 +13,6 @@ public class PlayerControllerElder_RH : MonoBehaviour {
 	public float smoothTime = 0.0F;
 	public float xVelocity = 0.0F;
 	public float zVelocity = 0.0F;
-	private float _cycle = 5.0f;
-
-	//public Vector3 centerOfMass;
 
 	// Use this for initialization
 	void Start () {
