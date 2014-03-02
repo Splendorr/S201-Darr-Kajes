@@ -35,6 +35,8 @@ public class ElderlyController : MonoBehaviour
 
 	float newXRot, newZRot;
 
+	public IKCtrl ikControl;
+
 	public delegate void SoundEventHandler();
 	public static event SoundEventHandler Taunt;
 	public static event SoundEventHandler Fall;
@@ -215,6 +217,7 @@ public class ElderlyController : MonoBehaviour
 	void DropWalker(Transform walkerTrans)
 	{
 		if(Fall!=null) Fall();
+		ikControl.ikActive = false;
 		walker.rigidbody.freezeRotation = false;
 		hasWalker = false;
 		touchingWalker = false;
