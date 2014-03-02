@@ -92,6 +92,26 @@ public class ElderlyController : MonoBehaviour
 				rigidbody.freezeRotation = false;
 				rigidbody.drag = 30;
 			}
+			if(!walker.GetComponent<WalkerController>().isOnGround &&
+			   hasWalker)
+			{
+				if (Input.GetKeyDown (KeyCode.X) &&
+				    rightFootReady)
+				{
+					rightFootReady = false;
+					rigidbody.AddRelativeForce(new Vector3(1f, 0, 1) * (playerSpeed/2));
+					StartCoroutine(Turn(Quaternion.identity, Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y + 5, transform.rotation.eulerAngles.z), footCooldown));
+					StartCoroutine(RightFootCooler());
+				}
+				else if (Input.GetKeyDown (KeyCode.Z) &&
+				         leftFootReady)
+				{
+					leftFootReady = false;
+					rigidbody.AddRelativeForce(new Vector3(-1f, 0, 1) * (playerSpeed/2));
+					StartCoroutine(Turn(Quaternion.identity, Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y - 5, transform.rotation.eulerAngles.z), footCooldown));
+					StartCoroutine(LeftFootCooler());
+				}
+			}
 		}
 		else
 		{
@@ -114,6 +134,17 @@ public class ElderlyController : MonoBehaviour
 		   !leftFootReady)
 		{
 			rigidbody.AddForce(new Vector3(Random.Range(-playerSpeed, playerSpeed), 0, Random.Range(-playerSpeed, playerSpeed)));
+		}
+	}
+
+	IEnumerator Turn(Quaternion start, Quaternion end, float time)
+	{
+		float elapsedTime = 0.0f;
+		while (elapsedTime < time)
+		{
+			transform.rotation = Quaternion.Lerp(start, end, (elapsedTime / time));
+			elapsedTime += Time.deltaTime;
+			yield return null;
 		}
 	}
 	
