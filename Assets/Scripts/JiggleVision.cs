@@ -13,8 +13,7 @@ public class JiggleVision : MonoBehaviour {
 	public float smoothTime = 0.0F;
 	public float xVelocity = 0.0F;
 	public float zVelocity = 0.0F;
-
-	public GameObject walker;
+	
 	public WalkerController walkerController;
 	
 	// Use this for initialization
@@ -22,7 +21,7 @@ public class JiggleVision : MonoBehaviour {
 //		xPosition = 0;//transform.position.x;
 //		zPosition = 0;//transform.position.z;
 //		walker = gameObject;
-		walkerController = walker.GetComponent<WalkerController>();
+		walkerController = GetComponent<WalkerController>();
 	}
 	
 	// Update is called once per frame
@@ -39,7 +38,7 @@ public class JiggleVision : MonoBehaviour {
 		}
 		float newRotationX = Mathf.SmoothDamp(transform.eulerAngles.x, transform.eulerAngles.x+xRotation, ref xVelocity, smoothTime);
 		float newRotationZ = Mathf.SmoothDamp(transform.eulerAngles.z, transform.eulerAngles.z+zRotation, ref zVelocity, smoothTime);
-		transform.eulerAngles = new Vector3(newRotationX, walker.transform.eulerAngles.y, newRotationZ);
+		transform.eulerAngles = new Vector3(newRotationX, transform.eulerAngles.y, newRotationZ);
 
 	}
 
@@ -48,7 +47,7 @@ public class JiggleVision : MonoBehaviour {
 		xRotation = Random.Range(-.3f, .3f);
 		zRotation = Random.Range(-.3f, .3f);
 
-		if(walker.transform.position.y < -0.6f) {
+		if(transform.position.y < -0.6f) {
 			// state 1
 			smoothTime = Random.Range(0.02f, 0.6f);
 		} else {
