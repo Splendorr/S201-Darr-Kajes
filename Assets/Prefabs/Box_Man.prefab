@@ -1178,6 +1178,7 @@ GameObject:
   - 54: {fileID: 5400000}
   - 23: {fileID: 2300000}
   - 114: {fileID: 11400000}
+  - 114: {fileID: 11400004}
   m_Layer: 0
   m_Name: Box_Man
   m_TagString: Untagged
@@ -2240,7 +2241,7 @@ Animator:
   m_GameObject: {fileID: 100154}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 74fcaaee74fa34307a2473762265e8b7, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e9b60e1589af04c8dafb84375d2cd309, type: 2}
   m_CullingMode: 1
   m_ApplyRootMotion: 1
   m_AnimatePhysics: 0
@@ -2279,6 +2280,19 @@ MonoBehaviour:
   zVelocity: 0
   startY: 0
   startZ: 0
+--- !u!114 &11400004
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc5a42fe78637497f9be19073d45047d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ikActive: 0
+  rightHandObj: {fileID: 0}
 --- !u!124 &12400000
 Behaviour:
   m_ObjectHideFlags: 1
