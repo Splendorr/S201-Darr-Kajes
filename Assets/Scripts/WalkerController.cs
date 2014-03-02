@@ -52,7 +52,6 @@ public class WalkerController : MonoBehaviour
 
 	void OnCollisionEnter(Collision col)
 	{
-		Debug.Log ("Collision: " + col.collider);
 		if(col.collider.CompareTag("floor") && Vector3.Angle(transform.up, Vector3.up) < 70)
 		{
 			isOnGround = true;
