@@ -13,7 +13,7 @@ public class BlinkingLight : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		random = Random.Range(10000.0f, 30000.0f);
+		random = Random.Range(2000.0f, 10000.0f);
 	}
 	
 	// Update is called once per frame
