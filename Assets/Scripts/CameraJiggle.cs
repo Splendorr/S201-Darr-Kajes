@@ -16,17 +16,22 @@ public class CameraJiggle : MonoBehaviour {
 	
 	public float nextupdate = 0.0f;
 
+	public GameObject camera;
+
 	// Use this for initialization
 	void Start () {
 		xPosition = transform.position.x;
 		zPosition = transform.position.z;
+		camera = GameObject.Find("Camera");
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
 		getJiggle();
-		xRotation = 31.47588f;
+		//xRotation = 31.47588f;
+		xRotation = transform.localEulerAngles.x;
+		print(xRotation);
 		//smoothTime = 0.04f;
 		float newRotationZ = Mathf.SmoothDamp(transform.position.z, zRotation, ref zVelocity, smoothTime);
 		transform.eulerAngles = new Vector3(xRotation, yRotation, newRotationZ);

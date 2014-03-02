@@ -227,6 +227,7 @@ MonoBehaviour:
   xVelocity: 0
   zVelocity: 0
   nextupdate: 0
+  camera: {fileID: 0}
 --- !u!1 &311826540
 GameObject:
   m_ObjectHideFlags: 0
@@ -875,6 +876,7 @@ MonoBehaviour:
   smoothTime: 0
   xVelocity: 0
   zVelocity: 0
+  walker: {fileID: 0}
 --- !u!1 &1075936579
 GameObject:
   m_ObjectHideFlags: 0
@@ -1140,6 +1142,7 @@ MonoBehaviour:
   xVelocity: 0
   zVelocity: 0
   nextupdate: 0
+  camera: {fileID: 0}
 --- !u!1 &1273661464
 GameObject:
   m_ObjectHideFlags: 0
@@ -1688,6 +1691,7 @@ MonoBehaviour:
   smoothTime: 0
   xVelocity: 0
   zVelocity: 0
+  walker: {fileID: 0}
 --- !u!1 &1903841937
 GameObject:
   m_ObjectHideFlags: 0
