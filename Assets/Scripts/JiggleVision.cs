@@ -20,7 +20,7 @@ public class JiggleVision : MonoBehaviour {
 	void Start () {
 //		xPosition = 0;//transform.position.x;
 //		zPosition = 0;//transform.position.z;
-		walker = gameObject;
+//		walker = gameObject;
 	}
 	
 	// Update is called once per frame
