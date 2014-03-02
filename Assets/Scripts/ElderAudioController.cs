@@ -35,7 +35,7 @@ public class ElderAudioController : MonoBehaviour
 
 	void PlayFall()
 	{
-		audio.clip = tauntSounds[Random.Range(0,fallSounds.Length - 1)];
+		audio.clip = fallSounds[Random.Range(0,fallSounds.Length - 1)];
 		audio.Play(); 
 	}
 }
