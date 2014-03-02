@@ -579,8 +579,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isOnGround: 0
-  elderFocus: {fileID: 0}
-  elder: {fileID: 0}
+  elder: {fileID: 100000, guid: 0cb9a0cbd03da473e94323330705f115, type: 2}
   frontLeft: {fileID: 400012}
   frontRight: {fileID: 400002}
   backLeft: {fileID: 400000}

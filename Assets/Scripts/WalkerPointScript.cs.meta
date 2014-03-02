@@ -3,7 +3,7 @@ guid: 60651197546bb4394b45f8dd20359a81
 MonoImporter:
   serializedVersion: 2
   defaultReferences:
-  - walker: {instanceID: 0}
+  - walker: {fileID: 11400008, guid: 4af478ffda1fd4804b7eeffc5256aaf2, type: 2}
   - spark: {fileID: 400000, guid: 1d97095af09994fc5ada613f168b9715, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}

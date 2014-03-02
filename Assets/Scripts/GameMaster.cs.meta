@@ -3,12 +3,10 @@ guid: 3e1dbeeacd3d14c939180a420cf6722d
 MonoImporter:
   serializedVersion: 2
   defaultReferences:
-  - _pc: {fileID: 100002, guid: c01c2e23139fe4fe78159dfecb0b27b8, type: 2}
-  - _pc1: {fileID: 100002, guid: 7756f18a7b1a54c95b7fca9b49d80e1d, type: 2}
-  - _pc2: {fileID: 100002, guid: b07388317e4494e07b1a7983ad93c694, type: 2}
+  - _pc: {fileID: 100158, guid: d0aa18598209c4d7db1646ed63e98bc5, type: 2}
+  - _pc1: {fileID: 100158, guid: d0aa18598209c4d7db1646ed63e98bc5, type: 2}
+  - _pc2: {fileID: 100158, guid: d0aa18598209c4d7db1646ed63e98bc5, type: 2}
   - _walker: {fileID: 100002, guid: 4af478ffda1fd4804b7eeffc5256aaf2, type: 2}
-  - _walker1: {instanceID: 0}
-  - _walker2: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
