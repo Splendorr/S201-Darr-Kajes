@@ -18,26 +18,57 @@ public class ElderlyController : MonoBehaviour
 	//Becomes false after dropping walker.
 	private bool hasWalker = true;
 
+	//This acivates to prevent accidentally dropping the walker.
+	public bool reachLimit = false;
+
 	//FLOATS
 
 	public float playerSpeed = 10.0f;
 
 	public float footCooldown = 0.0001f;
 
+	float newXRot, newZRot;
+
 	void Start()
 	{
 		rigidbody.centerOfMass = new Vector3(0,0,.1f);
+		newXRot = transform.rotation.eulerAngles.x;
+		newZRot = transform.rotation.eulerAngles.z;
 	}
 
 	void Update()
 	{
 		if(hasWalker)
 		{
-			if(walker.GetComponent<WalkerController>().isOnGround)
+			if(walker.GetComponent<WalkerController>().isOnGround &&
+			   hasWalker)
 			{
 				rigidbody.useGravity = false;
 				rigidbody.freezeRotation = true;
 				rigidbody.drag = 5;
+
+				//Rights self if rotation is off
+				if(transform.rotation.eulerAngles.x > 0.0f &&
+				   transform.rotation.eulerAngles.x <= 180.0f)
+				{
+					newXRot = transform.rotation.eulerAngles.x - 0.01f;
+				}
+				if(transform.rotation.eulerAngles.x <= 360.0f &&
+				   transform.rotation.eulerAngles.x > 180.0f)
+				{
+					newXRot = transform.rotation.eulerAngles.x + 0.01f;
+				}
+				if(transform.rotation.eulerAngles.z > 0.0f &&
+				   transform.rotation.eulerAngles.z <= 180.0f)
+				{
+					newZRot =  transform.rotation.eulerAngles.z - 0.01f;
+				}
+				if(transform.rotation.eulerAngles.z <= 360.0f &&
+				   transform.rotation.eulerAngles.z > 180.0f)
+				{
+					newZRot = transform.rotation.eulerAngles.z + 0.01f;
+				}
+				transform.rotation = Quaternion.Euler(newXRot, 0, newZRot);
 				if (Input.GetKeyDown (KeyCode.X) &&
 				    rightFootReady &&
 				    !touchingWalker)
@@ -59,7 +90,7 @@ public class ElderlyController : MonoBehaviour
 			{
 				rigidbody.useGravity = true;
 				rigidbody.freezeRotation = false;
-				rigidbody.drag = 50;
+				rigidbody.drag = 30;
 			}
 		}
 		else
@@ -82,7 +113,7 @@ public class ElderlyController : MonoBehaviour
 		if(!rightFootReady &&
 		   !leftFootReady)
 		{
-			rigidbody.AddForce(new Vector3(Random.Range(-(playerSpeed), (playerSpeed)), 0, Random.Range(-(playerSpeed/2), (playerSpeed/2))));
+			rigidbody.AddForce(new Vector3(Random.Range(-playerSpeed, playerSpeed), 0, Random.Range(-playerSpeed, playerSpeed)));
 		}
 	}
 	
@@ -92,6 +123,11 @@ public class ElderlyController : MonoBehaviour
 		   hasWalker)
 		{
 			touchingWalker = true;
+		}
+		else if(col.CompareTag("Reach Limit"))
+		{
+			Debug.Log ("Back in.");
+			reachLimit = false;
 		}
 	}
 	void OnTriggerExit(Collider col)
@@ -107,6 +143,11 @@ public class ElderlyController : MonoBehaviour
 			Debug.Log ("Dropped it!");
 			DropWalker(walker.transform);
 		}
+		else if(col.CompareTag("Reach Limit"))
+		{
+			Debug.Log ("Reach limit!");
+			reachLimit = true;
+		}
 	}
 
 	void DropWalker(Transform walkerTrans)
@@ -117,6 +158,7 @@ public class ElderlyController : MonoBehaviour
 		touchingWalker = false;
 		rigidbody.freezeRotation = false;
 		rigidbody.drag = 10;
+		walker.rigidbody.centerOfMass = new Vector3 (0, 1, 1);
 	}
 
 	IEnumerator RightFootCooler()

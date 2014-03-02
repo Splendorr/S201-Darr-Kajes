@@ -5,6 +5,8 @@ public class WalkerController : MonoBehaviour
 {
 	public bool isOnGround = true;
 
+	public GameObject elder;
+
 	public Transform frontLeft;
 	public Transform frontRight;
 	public Transform backLeft;
@@ -13,7 +15,8 @@ public class WalkerController : MonoBehaviour
 	void FixedUpdate()
 	{
 		if(Input.GetKey(KeyCode.LeftShift) &&
-		   transform.parent != null)
+		   transform.parent != null &&
+		   !elder.GetComponent<ElderlyController>().reachLimit)
 		{
 			rigidbody.AddRelativeForce(new Vector3(0, -Physics.gravity.y * rigidbody.mass + rigidbody.drag, rigidbody.mass * 5 * Time.fixedDeltaTime));
 		}
@@ -52,7 +55,10 @@ public class WalkerController : MonoBehaviour
 		if(col.collider.tag == "floor" && Vector3.Angle(transform.up, Vector3.up) < 70)
 		{
 			isOnGround = true;
-			rigidbody.freezeRotation = true;
+			if(transform.parent != null)
+			{
+				rigidbody.freezeRotation = true;
+			}
 		}
 	}
 
