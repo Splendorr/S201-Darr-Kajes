@@ -13,7 +13,7 @@ public class ElderlyController : MonoBehaviour
 	private bool rightFootReady = true;
 	private bool leftFootReady = true;
 
-	private bool touchingWalker = false;
+	public bool touchingWalker = false;
 
 	//Becomes false after dropping walker.
 	public bool hasWalker = true;
@@ -119,6 +119,7 @@ public class ElderlyController : MonoBehaviour
 					rightFootReady = false;
 					rigidbody.AddRelativeForce(new Vector3(1f, 0, 1) * playerSpeed);
 					StartCoroutine(Turn(transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.y + turnRange, footCooldown));
+//					walker.transform.RotateAround(transform, y
 					StartCoroutine(RightFootCooler());
 				}
 				else if (Input.GetKeyDown (KeyCode.Z) &&

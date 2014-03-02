@@ -5,6 +5,9 @@ public class WalkerController : MonoBehaviour
 {
 	public bool isOnGround = true;
 
+	//center position AndroidJNI facing ReadOnlyCollectionBase this
+	public Transform elderFocus;
+
 	public GameObject elder;
 
 	public Transform frontLeft;
@@ -43,7 +46,9 @@ public class WalkerController : MonoBehaviour
 				rigidbody.AddForce(new Vector3(0, (-Physics.gravity.y * rigidbody.mass + rigidbody.drag) * .825f, 0));
 			}
 
-//			rigidbody.AddForce(new Vector3(0, (-Physics.gravity.y * rigidbody.mass + rigidbody.drag) * .825f, rigidbody.mass * 20 * Time.fixedDeltaTime));
+			//Center the walker in front of the elder.
+//			if(elderFocus.position.x > transform.position.x
+			Debug.Log(elderFocus.position);
 
 			//Rights self if rotation is off
 			if(transform.rotation.eulerAngles.x > 0.0f &&
