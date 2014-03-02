@@ -16,7 +16,7 @@ public class ElderlyController : MonoBehaviour
 	private bool touchingWalker = false;
 
 	//Becomes false after dropping walker.
-	private bool hasWalker = true;
+	public bool hasWalker = true;
 
 	//This acivates to prevent accidentally dropping the walker.
 	public bool reachLimit = false;
@@ -152,12 +152,11 @@ public class ElderlyController : MonoBehaviour
 
 	void DropWalker(Transform walkerTrans)
 	{
-		walkerTrans.parent = null;
 		walker.rigidbody.freezeRotation = false;
 		hasWalker = false;
 		touchingWalker = false;
 		rigidbody.freezeRotation = false;
-		rigidbody.drag = 10;
+		rigidbody.drag = 0;
 		walker.rigidbody.centerOfMass = new Vector3 (0, 1, 1);
 	}
 

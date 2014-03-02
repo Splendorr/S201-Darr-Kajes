@@ -498,6 +498,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walker: {fileID: 1615427640}
+  hasWalker: 1
   reachLimit: 0
   playerSpeed: 1000
   footCooldown: .25
