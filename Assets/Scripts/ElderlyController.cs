@@ -110,27 +110,26 @@ public class ElderlyController : MonoBehaviour
 				rigidbody.freezeRotation = false;
 				rigidbody.drag = 30;
 			}
-			if(!walker.GetComponent<WalkerController>().isOnGround &&
-			   hasWalker)
-			{
-				if (Input.GetKeyDown (KeyCode.X) &&
-				    rightFootReady)
-				{
-					rightFootReady = false;
-					rigidbody.AddRelativeForce(new Vector3(1f, 0, 1) * playerSpeed);
-					StartCoroutine(Turn(transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.y + turnRange, footCooldown));
-//					walker.transform.RotateAround(transform, y
-					StartCoroutine(RightFootCooler());
-				}
-				else if (Input.GetKeyDown (KeyCode.Z) &&
-				         leftFootReady)
-				{
-					leftFootReady = false;
-					rigidbody.AddRelativeForce(new Vector3(-1f, 0, 1) * playerSpeed);
-					StartCoroutine(Turn(transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.y - turnRange, footCooldown));
-					StartCoroutine(LeftFootCooler());
-				}
-			}
+//			if(!walker.GetComponent<WalkerController>().isOnGround &&
+//			   hasWalker)
+//			{
+//				if (Input.GetKeyDown (KeyCode.X) &&
+//				    rightFootReady)
+//				{
+//					rightFootReady = false;
+//					rigidbody.AddRelativeForce(new Vector3(1f, 0, 1) * playerSpeed);
+//					StartCoroutine(Turn(transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.y + turnRange, footCooldown));
+//					StartCoroutine(RightFootCooler());
+//				}
+//				else if (Input.GetKeyDown (KeyCode.Z) &&
+//				         leftFootReady)
+//				{
+//					leftFootReady = false;
+//					rigidbody.AddRelativeForce(new Vector3(-1f, 0, 1) * playerSpeed);
+//					StartCoroutine(Turn(transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.y - turnRange, footCooldown));
+//					StartCoroutine(LeftFootCooler());
+//				}
+//			}
 		}
 		else
 		{
