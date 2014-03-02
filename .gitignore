@@ -21,3 +21,12 @@ Build/*
 *.sln
 .plastic
 ignore.conf
+Assets/Prefabs/Elder Alone 2.prefab
+Assets/Prefabs/Elder Alone 2.prefab.meta
+Assets/Prefabs/Elder Alone.prefab
+Assets/Prefabs/Elder Alone.prefab.meta
+Assets/Prefabs/PlayerElder.prefab
+Assets/Prefabs/PlayerElder.prefab.meta
+Assets/models/Box_Man_Run.mb
+Assets/models/Box_Man_Run.mb.meta
+S201-Darr-Kajes-csharp.suo
