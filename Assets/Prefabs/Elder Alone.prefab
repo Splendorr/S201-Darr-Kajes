@@ -33,7 +33,7 @@ GameObject:
   - 23: {fileID: 2300000}
   - 114: {fileID: 11400000}
   m_Layer: 0
-  m_Name: Elder Alone 1
+  m_Name: Elder Alone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,7 +76,7 @@ Camera:
     serializedVersion: 2
     x: 0
     y: 0
-    width: .49000001
+    width: 1
     height: 1
   near clip plane: .300000012
   far clip plane: 1000
