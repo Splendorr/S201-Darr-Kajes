@@ -15,15 +15,15 @@ public class WalkerController : MonoBehaviour
 	void FixedUpdate()
 	{
 		if(Input.GetKey(KeyCode.LeftShift) &&
-		   transform.parent != null &&
+//		  transform.parent != null &&
 		   !elder.GetComponent<ElderlyController>().reachLimit)
 		{
-			rigidbody.AddRelativeForce(new Vector3(0, -Physics.gravity.y * rigidbody.mass + rigidbody.drag, rigidbody.mass * 5 * Time.fixedDeltaTime));
+			rigidbody.AddRelativeForce(new Vector3(0, -Physics.gravity.y * rigidbody.mass + rigidbody.drag, rigidbody.mass * 20 * Time.fixedDeltaTime));
 		}
-		else if(!isOnGround &&
-		        transform.parent != null)
+		else if(!isOnGround )//&&
+//		        transform.parent != null)
 		{
-			rigidbody.AddRelativeForce(new Vector3(0, (-Physics.gravity.y * rigidbody.mass + rigidbody.drag) * .825f, rigidbody.mass * 5 * Time.fixedDeltaTime));
+			rigidbody.AddRelativeForce(new Vector3(0, (-Physics.gravity.y * rigidbody.mass + rigidbody.drag) * .825f, rigidbody.mass * 20 * Time.fixedDeltaTime));
 
 			if(Input.GetKey(KeyCode.Q))
 			{
@@ -42,17 +42,17 @@ public class WalkerController : MonoBehaviour
 				rigidbody.AddForceAtPosition(new Vector3(0, .5f, 0), backRight.position);
 			}
 		}
-		else if(!isOnGround &&
-		        transform.parent == null)
+		else if(!isOnGround)// &&
+//		       transform.parent == null)
 		{
-			rigidbody.AddForce(new Vector3(0, (Physics.gravity.y * rigidbody.mass + rigidbody.drag) * 2.825f, rigidbody.mass * 5 * Time.fixedDeltaTime));
+			rigidbody.AddForce(new Vector3(0, (Physics.gravity.y * rigidbody.mass + rigidbody.drag) * 2.825f, rigidbody.mass * 20 * Time.fixedDeltaTime));
 		}
 
 	}
 
 	void OnCollisionEnter(Collision col)
 	{
-		if(col.collider.tag == "floor" && Vector3.Angle(transform.up, Vector3.up) < 70)
+		if(col.collider.CompareTag("floor") && Vector3.Angle(transform.up, Vector3.up) < 70)
 		{
 			isOnGround = true;
 			if(transform.parent != null)
@@ -64,7 +64,7 @@ public class WalkerController : MonoBehaviour
 
 	void OnCollisionExit(Collision col)
 	{
-		if(col.collider.tag == "floor")
+		if(col.collider.CompareTag ("floor"))
 		{
 			isOnGround = false;
 			rigidbody.freezeRotation = false;
