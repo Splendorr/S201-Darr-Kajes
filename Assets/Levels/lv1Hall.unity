@@ -630,6 +630,8 @@ MonoBehaviour:
   walker: {fileID: 1615427640}
   hasWalker: 1
   reachLimit: 0
+  centerY: 0
+  turnRange: 10
   playerSpeed: 1000
   footCooldown: .25
 --- !u!23 &536576219
@@ -1859,6 +1861,10 @@ Prefab:
       propertyPath: elder
       value: 
       objectReference: {fileID: 536576216}
+    - target: {fileID: 11400000, guid: 4af478ffda1fd4804b7eeffc5256aaf2, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4af478ffda1fd4804b7eeffc5256aaf2, type: 2}
   m_RootGameObject: {fileID: 1615427640}
@@ -3376,8 +3382,8 @@ MonoBehaviour:
   smoothTime: 0
   yVelocity: 0
   zVelocity: 0
-  startY: 0
   startZ: 0
+  myElder: {fileID: 0}
 --- !u!124 &1934356933
 Behaviour:
   m_ObjectHideFlags: 0
