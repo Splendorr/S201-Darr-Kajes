@@ -76,7 +76,7 @@ Camera:
     serializedVersion: 2
     x: 0
     y: 0
-    width: .49000001
+    width: 1
     height: 1
   near clip plane: .300000012
   far clip plane: 1000
@@ -153,6 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walker: {fileID: 0}
+  hasWalker: 1
   reachLimit: 0
   playerSpeed: 1000
   footCooldown: .25
@@ -172,10 +173,9 @@ MonoBehaviour:
   yRotation: 0
   speed: 0
   smoothTime: 0
-  xVelocity: 0
+  yVelocity: 0
   zVelocity: 0
   nextupdate: 0
-  jigCamera: {fileID: 0}
 --- !u!124 &12400000
 Behaviour:
   m_ObjectHideFlags: 1
