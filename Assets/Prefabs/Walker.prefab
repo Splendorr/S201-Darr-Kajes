@@ -440,8 +440,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xRotation: 0
   zRotation: 0
-  yRotation: 0
-  speed: 0
   smoothTime: 0
   xVelocity: 0
   zVelocity: 0
@@ -478,6 +476,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walker: {fileID: 0}
   onGround: 1
+  spark: {fileID: 400000, guid: 1d97095af09994fc5ada613f168b9715, type: 2}
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -491,6 +490,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walker: {fileID: 0}
   onGround: 1
+  spark: {fileID: 400000, guid: 1d97095af09994fc5ada613f168b9715, type: 2}
 --- !u!114 &11400008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -504,6 +504,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walker: {fileID: 0}
   onGround: 1
+  spark: {fileID: 400000, guid: 1d97095af09994fc5ada613f168b9715, type: 2}
 --- !u!114 &11400010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -517,6 +518,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walker: {fileID: 0}
   onGround: 1
+  spark: {fileID: 400000, guid: 1d97095af09994fc5ada613f168b9715, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
