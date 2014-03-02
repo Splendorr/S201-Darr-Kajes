@@ -24,8 +24,16 @@ public class CameraJiggle : MonoBehaviour {
 		getJiggle();
 		float newRotationZ = Mathf.SmoothDamp(transform.eulerAngles.z, transform.eulerAngles.z + zRotation, ref zVelocity, smoothTime);
 		float newRotationY = Mathf.SmoothDamp(transform.eulerAngles.y, transform.eulerAngles.y + yRotation, ref yVelocity, smoothTime);
-		transform.eulerAngles = new Vector3(transform.eulerAngles.x, Mathf.Clamp(newRotationY, startY - 10f, startY + 10f), Mathf.Clamp(newRotationZ, startZ - 10f, startZ + 10f));
+		transform.eulerAngles = new Vector3(transform.eulerAngles.x, ClampAngle(newRotationY, startY - 10f, startY + 10f), ClampAngle(newRotationZ, startZ - 10f, startZ + 10f));
 		
+	}
+
+	float ClampAngle(float angle, float from, float to) {
+		if(angle > 180) angle = 360 - angle;
+		angle = Mathf.Clamp(angle, from, to);
+		if(angle < 0) angle = 360 + angle;
+		
+		return angle;
 	}
 	
 	void getJiggle() {

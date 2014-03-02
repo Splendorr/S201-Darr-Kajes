@@ -2,22 +2,12 @@
 using System.Collections;
 
 public class GameMaster : MonoBehaviour {
-	/*
-	public GameObject playerCharacter;
-	public GameObject playerCharacterOne;
-	public GameObject playerCharacterTwo;
-
-	public GameObject walker;
-	public GameObject walkerOne;
-	public GameObject walkerTwo;
 
 	public GameObject _pc;
 	public GameObject _pc1;
 	public GameObject _pc2;
 
 	public GameObject _walker;
-	public GameObject _walker1;
-	public GameObject _walker2;
 
 	public float xOffset = 0.0f;
 	public float yOffset = -0.94f;
@@ -33,48 +23,51 @@ public class GameMaster : MonoBehaviour {
 
 	public bool singlePlayer = false;
 	
-	
+
 	// Use this for initialization
 	void Start () {
 
 		if(singlePlayer) {
+			print("true: " + singlePlayer);
 
-			_playerSpawnPointPos = new Vector3(0.0f, 1.0f, 7.0f);
+			_playerSpawnPointPos = new Vector3(0.0f, 1.7f, 7.0f);
 			_walkerSpawnPointPos = new Vector3(xOffset, yOffset, zOffset);
 
-			_pc = (GameObject)Instantiate(Resources.Load("Elder Alone"));
-			_walker = (GameObject)Instantiate(Resources.Load("Walker"));
+			_pc = (GameObject) Instantiate(_pc, transform.position, transform.rotation);
+			_walker = (GameObject)Instantiate(_walker, transform.position, transform.rotation);
 			
 			_pc.transform.position = _playerSpawnPointPos;
 			_walkerSpawnPointPos = new Vector3(_pc.transform.position.x + xOffset, _pc.transform.position.y + yOffset, _pc.transform.position.z + zOffset);
+			_walker.transform.position = _walkerSpawnPointPos;
 			Debug.Log("Moved to Player Spawn Point");
 
 		} else {
-
+			print("false: " + singlePlayer);
 			// 2 player version
-			_playerOneSpawnPointPos = new Vector3(1.0f, 1.0f, 7.0f);
+			_playerOneSpawnPointPos = new Vector3(1.0f, 1.7f, 7.0f);
 			_walkerOneSpawnPointPos = new Vector3(xOffset, yOffset, zOffset);
-			
-			_pc1 = (GameObject)Instantiate(Resources.Load("Elder Alone 1"));
-			_walker1 = (GameObject)Instantiate(Resources.Load("Walker"));
+
+			_pc1 = (GameObject) Instantiate(_pc1, transform.position, transform.rotation);	
+			GameObject _walker1 = (GameObject)Instantiate(_walker, transform.position, transform.rotation);
 
 			_pc1.transform.position = _playerOneSpawnPointPos;
 			_walkerOneSpawnPointPos = new Vector3(_pc1.transform.position.x + xOffset, _pc1.transform.position.y + yOffset, _pc1.transform.position.z + zOffset);
+			_walker1.transform.position = _walkerOneSpawnPointPos;
 			Debug.Log("Moved to Player1 Spawn Point");
 
 			// 2 player version
-			_playerTwoSpawnPointPos = new Vector3(-1.0f, 1.0f, 7.0f);
+			_playerTwoSpawnPointPos = new Vector3(-1.0f, 1.7f, 7.0f);
 			_walkerTwoSpawnPointPos = new Vector3(xOffset, yOffset, zOffset);
 
-			_pc2 = (GameObject)Instantiate(Resources.Load("Elder Alone 2"));
-			_walker2 = (GameObject)Instantiate(Resources.Load("Walker"));
+			_pc2 = (GameObject) Instantiate(_pc2, transform.position, transform.rotation);	
+			GameObject _walker2 = (GameObject)Instantiate(_walker, transform.position, transform.rotation);
 
 			_pc2.transform.position = _playerTwoSpawnPointPos;
 			_walkerTwoSpawnPointPos = new Vector3(_pc2.transform.position.x + xOffset, _pc2.transform.position.y + yOffset, _pc2.transform.position.z + zOffset);
+			_walker2.transform.position = _walkerTwoSpawnPointPos;
 			Debug.Log("Moved to Player2 Spawn Point");
 
 		}
+	}
 
-
-*/
 }
