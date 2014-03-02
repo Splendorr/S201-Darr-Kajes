@@ -51,22 +51,22 @@ public class ElderlyController : MonoBehaviour
 				if(transform.rotation.eulerAngles.x > 0.0f &&
 				   transform.rotation.eulerAngles.x <= 180.0f)
 				{
-					newXRot = transform.rotation.eulerAngles.x - 0.01f;
+					newXRot = transform.rotation.eulerAngles.x - 0.04f;
 				}
 				if(transform.rotation.eulerAngles.x <= 360.0f &&
 				   transform.rotation.eulerAngles.x > 180.0f)
 				{
-					newXRot = transform.rotation.eulerAngles.x + 0.01f;
+					newXRot = transform.rotation.eulerAngles.x + 0.04f;
 				}
 				if(transform.rotation.eulerAngles.z > 0.0f &&
 				   transform.rotation.eulerAngles.z <= 180.0f)
 				{
-					newZRot =  transform.rotation.eulerAngles.z - 0.01f;
+					newZRot =  transform.rotation.eulerAngles.z - 0.04f;
 				}
 				if(transform.rotation.eulerAngles.z <= 360.0f &&
 				   transform.rotation.eulerAngles.z > 180.0f)
 				{
-					newZRot = transform.rotation.eulerAngles.z + 0.01f;
+					newZRot = transform.rotation.eulerAngles.z + 0.04f;
 				}
 				transform.rotation = Quaternion.Euler(newXRot, 0, newZRot);
 				if (Input.GetKeyDown (KeyCode.X) &&
