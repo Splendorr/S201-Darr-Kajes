@@ -147,6 +147,7 @@ GameObject:
   - 4: {fileID: 423200632}
   - 33: {fileID: 423200634}
   - 65: {fileID: 423200633}
+  - 114: {fileID: 423200635}
   m_Layer: 0
   m_Name: WalkerPoint
   m_TagString: Untagged
@@ -173,7 +174,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 1264276872}
   m_GameObject: {fileID: 423200631}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -186,6 +187,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1264276872}
   m_GameObject: {fileID: 423200631}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &423200635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400008, guid: 4af478ffda1fd4804b7eeffc5256aaf2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1264276872}
+  m_GameObject: {fileID: 423200631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60651197546bb4394b45f8dd20359a81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walker: {fileID: 0}
+  onGround: 1
 --- !u!1 &449825326
 GameObject:
   m_ObjectHideFlags: 0
@@ -285,11 +300,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isOnGround: 0
-  elder: {fileID: 0}
-  frontLeft: {fileID: 0}
-  frontRight: {fileID: 0}
-  backLeft: {fileID: 0}
-  backRight: {fileID: 0}
+  elder: {fileID: 547142250}
+  frontLeft: {fileID: 1633341658}
+  frontRight: {fileID: 946241058}
+  backLeft: {fileID: 785535122}
+  backRight: {fileID: 988955188}
+  pointsOnGround: 0
   newXRot: 0
 --- !u!23 &449825332
 Renderer:
@@ -353,7 +369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09836b1aec52c45699e48a0e3c64ed09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walker: {fileID: 0}
+  walker: {fileID: 449825326}
   hasWalker: 1
   reachLimit: 0
   playerSpeed: 1000
@@ -465,6 +481,10 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 4af478ffda1fd4804b7eeffc5256aaf2, type: 2}
+      propertyPath: elder
+      value: 
+      objectReference: {fileID: 547142250}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4af478ffda1fd4804b7eeffc5256aaf2, type: 2}
   m_RootGameObject: {fileID: 449825326}
@@ -592,6 +612,7 @@ GameObject:
   - 4: {fileID: 785535122}
   - 33: {fileID: 785535124}
   - 65: {fileID: 785535123}
+  - 114: {fileID: 785535125}
   m_Layer: 0
   m_Name: WalkerPoint
   m_TagString: Untagged
@@ -618,7 +639,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 590060528}
   m_GameObject: {fileID: 785535121}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -631,6 +652,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 590060528}
   m_GameObject: {fileID: 785535121}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &785535125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400006, guid: 4af478ffda1fd4804b7eeffc5256aaf2,
+    type: 2}
+  m_PrefabInternal: {fileID: 590060528}
+  m_GameObject: {fileID: 785535121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60651197546bb4394b45f8dd20359a81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walker: {fileID: 0}
+  onGround: 1
 --- !u!1 &837986464
 GameObject:
   m_ObjectHideFlags: 0
@@ -641,6 +676,7 @@ GameObject:
   - 4: {fileID: 837986465}
   - 33: {fileID: 837986467}
   - 65: {fileID: 837986466}
+  - 114: {fileID: 837986468}
   m_Layer: 0
   m_Name: WalkerPoint
   m_TagString: Untagged
@@ -667,7 +703,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 1264276872}
   m_GameObject: {fileID: 837986464}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -680,6 +716,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1264276872}
   m_GameObject: {fileID: 837986464}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &837986468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: 4af478ffda1fd4804b7eeffc5256aaf2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1264276872}
+  m_GameObject: {fileID: 837986464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60651197546bb4394b45f8dd20359a81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walker: {fileID: 0}
+  onGround: 1
 --- !u!1 &917256566
 GameObject:
   m_ObjectHideFlags: 0
@@ -785,6 +835,7 @@ GameObject:
   - 4: {fileID: 920516357}
   - 33: {fileID: 920516359}
   - 65: {fileID: 920516358}
+  - 114: {fileID: 920516360}
   m_Layer: 0
   m_Name: WalkerPoint
   m_TagString: Untagged
@@ -811,7 +862,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 1264276872}
   m_GameObject: {fileID: 920516356}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -824,6 +875,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1264276872}
   m_GameObject: {fileID: 920516356}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &920516360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 4af478ffda1fd4804b7eeffc5256aaf2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1264276872}
+  m_GameObject: {fileID: 920516356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60651197546bb4394b45f8dd20359a81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walker: {fileID: 0}
+  onGround: 1
 --- !u!1001 &934748100
 Prefab:
   m_ObjectHideFlags: 0
@@ -875,6 +940,7 @@ GameObject:
   - 4: {fileID: 946241058}
   - 33: {fileID: 946241060}
   - 65: {fileID: 946241059}
+  - 114: {fileID: 946241061}
   m_Layer: 0
   m_Name: WalkerPoint
   m_TagString: Untagged
@@ -901,7 +967,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 590060528}
   m_GameObject: {fileID: 946241057}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -914,6 +980,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 590060528}
   m_GameObject: {fileID: 946241057}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &946241061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 4af478ffda1fd4804b7eeffc5256aaf2,
+    type: 2}
+  m_PrefabInternal: {fileID: 590060528}
+  m_GameObject: {fileID: 946241057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60651197546bb4394b45f8dd20359a81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walker: {fileID: 0}
+  onGround: 1
 --- !u!1 &988955187
 GameObject:
   m_ObjectHideFlags: 0
@@ -924,6 +1004,7 @@ GameObject:
   - 4: {fileID: 988955188}
   - 33: {fileID: 988955190}
   - 65: {fileID: 988955189}
+  - 114: {fileID: 988955191}
   m_Layer: 0
   m_Name: WalkerPoint
   m_TagString: Untagged
@@ -950,7 +1031,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 590060528}
   m_GameObject: {fileID: 988955187}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -963,6 +1044,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 590060528}
   m_GameObject: {fileID: 988955187}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &988955191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400008, guid: 4af478ffda1fd4804b7eeffc5256aaf2,
+    type: 2}
+  m_PrefabInternal: {fileID: 590060528}
+  m_GameObject: {fileID: 988955187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60651197546bb4394b45f8dd20359a81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walker: {fileID: 0}
+  onGround: 1
 --- !u!1001 &996497413
 Prefab:
   m_ObjectHideFlags: 0
@@ -998,6 +1093,10 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 7756f18a7b1a54c95b7fca9b49d80e1d, type: 2}
+      propertyPath: walker
+      value: 
+      objectReference: {fileID: 1542614393}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7756f18a7b1a54c95b7fca9b49d80e1d, type: 2}
   m_RootGameObject: {fileID: 2142307124}
@@ -1334,6 +1433,10 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 4af478ffda1fd4804b7eeffc5256aaf2, type: 2}
+      propertyPath: elder
+      value: 
+      objectReference: {fileID: 2142307124}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4af478ffda1fd4804b7eeffc5256aaf2, type: 2}
   m_RootGameObject: {fileID: 1542614393}
@@ -1461,6 +1564,7 @@ GameObject:
   - 4: {fileID: 1463538898}
   - 33: {fileID: 1463538900}
   - 65: {fileID: 1463538899}
+  - 114: {fileID: 1463538901}
   m_Layer: 0
   m_Name: WalkerPoint
   m_TagString: Untagged
@@ -1487,7 +1591,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 1264276872}
   m_GameObject: {fileID: 1463538897}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -1500,6 +1604,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1264276872}
   m_GameObject: {fileID: 1463538897}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1463538901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400006, guid: 4af478ffda1fd4804b7eeffc5256aaf2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1264276872}
+  m_GameObject: {fileID: 1463538897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60651197546bb4394b45f8dd20359a81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walker: {fileID: 0}
+  onGround: 1
 --- !u!1 &1542614393
 GameObject:
   m_ObjectHideFlags: 0
@@ -1599,11 +1717,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isOnGround: 0
-  elder: {fileID: 0}
-  frontLeft: {fileID: 0}
-  frontRight: {fileID: 0}
-  backLeft: {fileID: 0}
-  backRight: {fileID: 0}
+  elder: {fileID: 2142307124}
+  frontLeft: {fileID: 837986465}
+  frontRight: {fileID: 920516357}
+  backLeft: {fileID: 1463538898}
+  backRight: {fileID: 423200632}
+  pointsOnGround: 0
   newXRot: 0
 --- !u!23 &1542614399
 Renderer:
@@ -1815,6 +1934,7 @@ GameObject:
   - 4: {fileID: 1633341658}
   - 33: {fileID: 1633341660}
   - 65: {fileID: 1633341659}
+  - 114: {fileID: 1633341661}
   m_Layer: 0
   m_Name: WalkerPoint
   m_TagString: Untagged
@@ -1841,7 +1961,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 590060528}
   m_GameObject: {fileID: 1633341657}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -1854,6 +1974,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 590060528}
   m_GameObject: {fileID: 1633341657}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1633341661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: 4af478ffda1fd4804b7eeffc5256aaf2,
+    type: 2}
+  m_PrefabInternal: {fileID: 590060528}
+  m_GameObject: {fileID: 1633341657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60651197546bb4394b45f8dd20359a81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walker: {fileID: 0}
+  onGround: 1
 --- !u!1 &1679595287
 GameObject:
   m_ObjectHideFlags: 0
@@ -1998,6 +2132,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1714799835}
   - 81: {fileID: 1714799834}
+  - 114: {fileID: 1714799836}
   m_Layer: 0
   m_Name: GameWorld
   m_TagString: Untagged
@@ -2024,6 +2159,17 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!114 &1714799836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1714799833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e1dbeeacd3d14c939180a420cf6722d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1752526033
 GameObject:
   m_ObjectHideFlags: 0
@@ -2122,6 +2268,10 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: b07388317e4494e07b1a7983ad93c694, type: 2}
+      propertyPath: walker
+      value: 
+      objectReference: {fileID: 449825326}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b07388317e4494e07b1a7983ad93c694, type: 2}
   m_RootGameObject: {fileID: 547142250}
@@ -2261,7 +2411,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09836b1aec52c45699e48a0e3c64ed09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walker: {fileID: 0}
+  walker: {fileID: 1542614393}
   hasWalker: 1
   reachLimit: 0
   playerSpeed: 1000
