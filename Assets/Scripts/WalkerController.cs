@@ -21,8 +21,8 @@ public class WalkerController : MonoBehaviour
 		if(Input.GetKey(KeyCode.LeftShift) &&
 		   !elder.GetComponent<ElderlyController>().reachLimit)
 		{
-			rigidbody.AddForce(new Vector3(0, -Physics.gravity.y * rigidbody.mass + rigidbody.drag, rigidbody.mass * 40 * Time.fixedDeltaTime));
-			newXRot = transform.rotation.eulerAngles.x - 0.1f;
+			rigidbody.AddForce(new Vector3(0, -Physics.gravity.y * rigidbody.mass + rigidbody.drag, rigidbody.mass * 30 * Time.fixedDeltaTime));
+			newXRot = transform.rotation.eulerAngles.x - 0.15f;
 			transform.rotation = Quaternion.Euler(newXRot, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z);
 		}
 		else if(!isOnGround &&
@@ -43,13 +43,13 @@ public class WalkerController : MonoBehaviour
 			if(transform.rotation.eulerAngles.x > 0.0f &&
 			   transform.rotation.eulerAngles.x <= 180.0f)
 			{
-				newXRot = transform.rotation.eulerAngles.x - 0.08f;
+				newXRot = transform.rotation.eulerAngles.x - 0.2f;
 				transform.rotation = Quaternion.Euler(newXRot, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z);
 			}
 			if(transform.rotation.eulerAngles.x <= 360.0f &&
 			   transform.rotation.eulerAngles.x > 180.0f)
 			{
-				newXRot = transform.rotation.eulerAngles.x + 0.08f;
+				newXRot = transform.rotation.eulerAngles.x + 0.2f;
 				transform.rotation = Quaternion.Euler(newXRot, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z);
 			}
 

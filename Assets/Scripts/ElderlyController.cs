@@ -157,6 +157,7 @@ public class ElderlyController : MonoBehaviour
 		touchingWalker = false;
 		rigidbody.freezeRotation = false;
 		rigidbody.drag = 0;
+		rigidbody.useGravity = true;
 		walker.rigidbody.centerOfMass = new Vector3 (0, 1, 1);
 	}
 
