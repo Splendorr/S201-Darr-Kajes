@@ -13,9 +13,11 @@ public class MainMenu : MonoBehaviour {
 			Application.LoadLevel("SinglePlayerLevel1");
 		}
 
-		if (GUI.Button(new Rect(button2Pos.transform.position.x, button2Pos.transform.position.y, 100, 25), "Two Player")) {
+		/*
+	 	if (GUI.Button(new Rect(button2Pos.transform.position.x, button2Pos.transform.position.y, 100, 25), "Two Player")) {
 			Application.LoadLevel("TwoPlayerLevel1");
 		}
+		*/
 
 		if (GUI.Button(new Rect(buttonQuitPos.transform.position.x, buttonQuitPos.transform.position.y, 100, 25), "Quit")) {
 			Application.Quit();
