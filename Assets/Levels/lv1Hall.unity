@@ -183,6 +183,32 @@ MonoBehaviour:
   walker: {fileID: 0}
   onGround: 1
   spark: {fileID: 400000, guid: 1d97095af09994fc5ada613f168b9715, type: 2}
+--- !u!1 &73191237
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100018, guid: 4af478ffda1fd4804b7eeffc5256aaf2, type: 2}
+  m_PrefabInternal: {fileID: 1937600463}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 73191238}
+  m_Layer: 0
+  m_Name: RightGrip
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &73191238
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400018, guid: 4af478ffda1fd4804b7eeffc5256aaf2, type: 2}
+  m_PrefabInternal: {fileID: 1937600463}
+  m_GameObject: {fileID: 73191237}
+  m_LocalRotation: {x: 0, y: -1, z: 0, w: -1.62920685e-07}
+  m_LocalPosition: {x: -.389674425, y: .999538422, z: .00709520979}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1615427641}
 --- !u!1 &92249768
 GameObject:
   m_ObjectHideFlags: 0
@@ -2874,6 +2900,8 @@ Transform:
   m_LocalPosition: {x: 2.45917821, y: 0, z: -23.8910866}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 73191238}
+  - {fileID: 2052733656}
   - {fileID: 603445674}
   - {fileID: 1277187488}
   - {fileID: 2030675269}
@@ -3533,3 +3561,29 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1937600463}
   m_GameObject: {fileID: 2030675268}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &2052733655
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100016, guid: 4af478ffda1fd4804b7eeffc5256aaf2, type: 2}
+  m_PrefabInternal: {fileID: 1937600463}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2052733656}
+  m_Layer: 0
+  m_Name: LeftGrip
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2052733656
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400016, guid: 4af478ffda1fd4804b7eeffc5256aaf2, type: 2}
+  m_PrefabInternal: {fileID: 1937600463}
+  m_GameObject: {fileID: 2052733655}
+  m_LocalRotation: {x: 0, y: -1, z: 0, w: -1.62920685e-07}
+  m_LocalPosition: {x: .383779287, y: .999538004, z: .00709546218}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1615427641}
