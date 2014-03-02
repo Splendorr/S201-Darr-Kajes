@@ -1,0 +1,117 @@
+fileFormatVersion: 2
+guid: ee1c515918fed4bc59654e27bcea7ac1
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: L_Arm
+    100002: L_Clavicle
+    100004: L_Elbow
+    100006: L_Forearm
+    100008: L_Hand
+    100010: L_Index1
+    100012: L_Index2
+    100014: L_Index3
+    100016: L_IndexEnd
+    100018: L_Middle1
+    100020: L_Middle2
+    100022: L_Middle3
+    100024: L_MiddleEnd
+    100026: L_Pinky1
+    100028: L_Pinky2
+    100030: L_Pinky3
+    100032: L_PinkyEnd
+    100034: L_Ring1
+    100036: L_Ring2
+    100038: L_Ring3
+    100040: L_RingEnd
+    100042: L_Shoulder
+    100044: L_Thumb1
+    100046: L_Thumb2
+    100048: L_Thumb3
+    100050: L_ThumbEnd
+    100052: L_Wrist
+    100054: //RootNode
+    400000: L_Arm
+    400002: L_Clavicle
+    400004: L_Elbow
+    400006: L_Forearm
+    400008: L_Hand
+    400010: L_Index1
+    400012: L_Index2
+    400014: L_Index3
+    400016: L_IndexEnd
+    400018: L_Middle1
+    400020: L_Middle2
+    400022: L_Middle3
+    400024: L_MiddleEnd
+    400026: L_Pinky1
+    400028: L_Pinky2
+    400030: L_Pinky3
+    400032: L_PinkyEnd
+    400034: L_Ring1
+    400036: L_Ring2
+    400038: L_Ring3
+    400040: L_RingEnd
+    400042: L_Shoulder
+    400044: L_Thumb1
+    400046: L_Thumb2
+    400048: L_Thumb3
+    400050: L_ThumbEnd
+    400052: L_Wrist
+    400054: //RootNode
+    4300000: L_Arm
+    9500000: //RootNode
+    13700000: L_Arm
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 3
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: L_Clavicle
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
