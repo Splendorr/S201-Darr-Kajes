@@ -12,17 +12,47 @@ public class WalkerController : MonoBehaviour
 	public Transform backLeft;
 	public Transform backRight;
 
+	//FLOATS
+
+	public float newXRot;
+
 	void FixedUpdate()
 	{
 		if(Input.GetKey(KeyCode.LeftShift) &&
 		   !elder.GetComponent<ElderlyController>().reachLimit)
 		{
-			rigidbody.AddRelativeForce(new Vector3(0, -Physics.gravity.y * rigidbody.mass + rigidbody.drag, rigidbody.mass * 20 * Time.fixedDeltaTime));
+			rigidbody.AddForce(new Vector3(0, -Physics.gravity.y * rigidbody.mass + rigidbody.drag, rigidbody.mass * 40 * Time.fixedDeltaTime));
+			newXRot = transform.rotation.eulerAngles.x - 0.1f;
+			transform.rotation = Quaternion.Euler(newXRot, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z);
 		}
 		else if(!isOnGround &&
 		        elder.GetComponent<ElderlyController>().hasWalker)
 		{
-			rigidbody.AddRelativeForce(new Vector3(0, (-Physics.gravity.y * rigidbody.mass + rigidbody.drag) * .825f, rigidbody.mass * 20 * Time.fixedDeltaTime));
+			if(!elder.GetComponent<ElderlyController>().reachLimit)
+			{
+				rigidbody.AddForce(new Vector3(0, (-Physics.gravity.y * rigidbody.mass + rigidbody.drag) * .825f, rigidbody.mass * 20 * Time.fixedDeltaTime));
+			}
+			else
+			{
+				rigidbody.AddForce(new Vector3(0, (-Physics.gravity.y * rigidbody.mass + rigidbody.drag) * .825f, 0));
+			}
+
+//			rigidbody.AddForce(new Vector3(0, (-Physics.gravity.y * rigidbody.mass + rigidbody.drag) * .825f, rigidbody.mass * 20 * Time.fixedDeltaTime));
+
+			//Rights self if rotation is off
+			if(transform.rotation.eulerAngles.x > 0.0f &&
+			   transform.rotation.eulerAngles.x <= 180.0f)
+			{
+				newXRot = transform.rotation.eulerAngles.x - 0.08f;
+				transform.rotation = Quaternion.Euler(newXRot, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z);
+			}
+			if(transform.rotation.eulerAngles.x <= 360.0f &&
+			   transform.rotation.eulerAngles.x > 180.0f)
+			{
+				newXRot = transform.rotation.eulerAngles.x + 0.08f;
+				transform.rotation = Quaternion.Euler(newXRot, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z);
+			}
+
 
 			if(Input.GetKey(KeyCode.Q))
 			{
@@ -41,6 +71,7 @@ public class WalkerController : MonoBehaviour
 				rigidbody.AddForceAtPosition(new Vector3(0, .5f, 0), backRight.position);
 			}
 		}
+
 		else if(!isOnGround &&
 		        !elder.GetComponent<ElderlyController>().hasWalker)
 		{
