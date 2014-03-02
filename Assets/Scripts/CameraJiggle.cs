@@ -7,8 +7,8 @@ public class CameraJiggle : MonoBehaviour {
 	public float zRotation = 0.0f;
 	public float yRotation = 0.0f;
 	public float speed = 0.0f;
-	private float xPosition = 0.0f;
-	private float zPosition = 0.0f;
+//	private float xPosition = 0.0f;
+//	private float zPosition = 0.0f;
 	
 	public float smoothTime = 0.0F;
 	public float xVelocity = 0.0F;
@@ -16,13 +16,12 @@ public class CameraJiggle : MonoBehaviour {
 	
 	public float nextupdate = 0.0f;
 
-	public GameObject camera;
+	public GameObject jigCamera;
 
 	// Use this for initialization
 	void Start () {
-		xPosition = transform.position.x;
-		zPosition = transform.position.z;
-		camera = GameObject.Find("Camera");
+//		xPosition = transform.position.x;
+//		zPosition = transform.position.z;
 	}
 	
 	// Update is called once per frame
@@ -31,7 +30,7 @@ public class CameraJiggle : MonoBehaviour {
 		getJiggle();
 		//xRotation = 31.47588f;
 		xRotation = transform.localEulerAngles.x;
-		print(xRotation);
+//		print(xRotation);
 		//smoothTime = 0.04f;
 		float newRotationZ = Mathf.SmoothDamp(transform.position.z, zRotation, ref zVelocity, smoothTime);
 		transform.eulerAngles = new Vector3(xRotation, yRotation, newRotationZ);

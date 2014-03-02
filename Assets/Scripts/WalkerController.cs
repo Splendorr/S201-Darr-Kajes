@@ -52,7 +52,8 @@ public class WalkerController : MonoBehaviour
 
 	void OnCollisionEnter(Collision col)
 	{
-		if(col.collider.tag == "floor" && Vector3.Angle(transform.up, Vector3.up) < 70)
+		Debug.Log ("Collision: " + col.collider);
+		if(col.collider.CompareTag("floor") && Vector3.Angle(transform.up, Vector3.up) < 70)
 		{
 			isOnGround = true;
 			if(transform.parent != null)
@@ -64,7 +65,7 @@ public class WalkerController : MonoBehaviour
 
 	void OnCollisionExit(Collision col)
 	{
-		if(col.collider.tag == "floor")
+		if(col.collider.CompareTag ("floor"))
 		{
 			isOnGround = false;
 			rigidbody.freezeRotation = false;
