@@ -51,6 +51,7 @@ public class GameMaster : MonoBehaviour {
 			GameObject _walker1 = (GameObject)Instantiate(_walker, transform.position, transform.rotation);
 
 			_pc1.transform.position = _playerOneSpawnPointPos;
+			_pc1.camera.rect = new Rect(0.0f,0.0f,0.49f,1.0f);
 			_walkerOneSpawnPointPos = new Vector3(_pc1.transform.position.x + xOffset, _pc1.transform.position.y + yOffset, _pc1.transform.position.z + zOffset);
 			_walker1.transform.position = _walkerOneSpawnPointPos;
 			Debug.Log("Moved to Player1 Spawn Point");
@@ -63,6 +64,7 @@ public class GameMaster : MonoBehaviour {
 			GameObject _walker2 = (GameObject)Instantiate(_walker, transform.position, transform.rotation);
 
 			_pc2.transform.position = _playerTwoSpawnPointPos;
+			_pc2.camera.rect = new Rect(0.5f,0.0f,0.49f,1.0f);
 			_walkerTwoSpawnPointPos = new Vector3(_pc2.transform.position.x + xOffset, _pc2.transform.position.y + yOffset, _pc2.transform.position.z + zOffset);
 			_walker2.transform.position = _walkerTwoSpawnPointPos;
 			Debug.Log("Moved to Player2 Spawn Point");

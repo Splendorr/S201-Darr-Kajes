@@ -2,7 +2,13 @@ fileFormatVersion: 2
 guid: 6b5a6fa9103b444729cb7394a625e890
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - elderFocus: {instanceID: 0}
+  - elder: {fileID: 100158, guid: d0aa18598209c4d7db1646ed63e98bc5, type: 2}
+  - frontLeft: {instanceID: 0}
+  - frontRight: {instanceID: 0}
+  - backLeft: {instanceID: 0}
+  - backRight: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
