@@ -13,7 +13,7 @@ public class ElderlyController : MonoBehaviour
 	private bool rightFootReady = true;
 	private bool leftFootReady = true;
 
-	private bool touchingWalker = false;
+	public bool touchingWalker = false;
 
 	//Becomes false after dropping walker.
 	public bool hasWalker = true;
@@ -35,6 +35,10 @@ public class ElderlyController : MonoBehaviour
 
 	float newXRot, newZRot;
 
+	public delegate void SoundEventHandler();
+	public static event SoundEventHandler Taunt;
+	public static event SoundEventHandler Fall;
+
 	void Start()
 	{
 		rigidbody.centerOfMass = new Vector3(0,0,.1f);
@@ -47,6 +51,13 @@ public class ElderlyController : MonoBehaviour
 	{
 		if(hasWalker)
 		{
+
+			if(Vector3.Angle(transform.up, Vector3.up) > 40)
+			{
+				DropWalker(this.transform);
+				return;
+			}
+
 			if(walker.GetComponent<WalkerController>().isOnGround &&
 			   hasWalker)
 			{
@@ -108,6 +119,7 @@ public class ElderlyController : MonoBehaviour
 					rightFootReady = false;
 					rigidbody.AddRelativeForce(new Vector3(1f, 0, 1) * playerSpeed);
 					StartCoroutine(Turn(transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.y + turnRange, footCooldown));
+//					walker.transform.RotateAround(transform, y
 					StartCoroutine(RightFootCooler());
 				}
 				else if (Input.GetKeyDown (KeyCode.Z) &&
@@ -141,6 +153,11 @@ public class ElderlyController : MonoBehaviour
 		   !leftFootReady)
 		{
 			rigidbody.AddForce(new Vector3(Random.Range(-playerSpeed, playerSpeed), 0, Random.Range(-playerSpeed, playerSpeed)));
+		}
+
+		if(Input.GetKeyDown(KeyCode.T))
+		{
+			if(Taunt!=null) Taunt();
 		}
 
 		//Updates for CameraJiggle
@@ -198,6 +215,7 @@ public class ElderlyController : MonoBehaviour
 
 	void DropWalker(Transform walkerTrans)
 	{
+		if(Fall!=null) Fall();
 		walker.rigidbody.freezeRotation = false;
 		hasWalker = false;
 		touchingWalker = false;
