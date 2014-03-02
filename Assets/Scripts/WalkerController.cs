@@ -5,9 +5,6 @@ public class WalkerController : MonoBehaviour
 {
 	public bool isOnGround = true;
 
-	//center position AndroidJNI facing ReadOnlyCollectionBase this
-	public Transform elderFocus;
-
 	public GameObject elder;
 
 	public Transform frontLeft;
@@ -20,6 +17,11 @@ public class WalkerController : MonoBehaviour
 	//+1 for each of the 4 points on the ground.  needs to be 4 for the walker to be "grounded".
 	public int pointsOnGround = 0;
 
+	public delegate void SoundEventHandler();
+	public static event SoundEventHandler Lift;
+
+	bool lifting = false;
+
 
 	//FLOATS
 
@@ -30,6 +32,12 @@ public class WalkerController : MonoBehaviour
 		if(Input.GetKey(KeyCode.LeftShift) &&
 		   !elder.GetComponent<ElderlyController>().reachLimit)
 		{
+			if(!lifting)
+			{
+				if(Lift!=null) Lift();
+				lifting = true;
+			}
+
 			rigidbody.AddForce(new Vector3(0, -Physics.gravity.y * rigidbody.mass + rigidbody.drag, rigidbody.mass * 30 * Time.fixedDeltaTime));
 			newXRot = transform.rotation.eulerAngles.x + 0.15f;
 			transform.rotation = Quaternion.Euler(newXRot, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z);
@@ -37,6 +45,7 @@ public class WalkerController : MonoBehaviour
 		else if(!isOnGround &&
 		        elder.GetComponent<ElderlyController>().hasWalker)
 		{
+			lifting = false;
 			if(!elder.GetComponent<ElderlyController>().reachLimit)
 			{
 				rigidbody.AddForce(new Vector3(0, (-Physics.gravity.y * rigidbody.mass + rigidbody.drag) * .825f, rigidbody.mass * 20 * Time.fixedDeltaTime));
@@ -47,8 +56,7 @@ public class WalkerController : MonoBehaviour
 			}
 
 			//Center the walker in front of the elder.
-//			if(elderFocus.position.x > transform.position.x
-			Debug.Log(elderFocus.position);
+
 
 			//Rights self if rotation is off
 			if(transform.rotation.eulerAngles.x > 0.0f &&

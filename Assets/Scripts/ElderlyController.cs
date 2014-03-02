@@ -35,13 +35,15 @@ public class ElderlyController : MonoBehaviour
 
 	float newXRot, newZRot;
 
+	public IKCtrl ikControl;
+
 	public delegate void SoundEventHandler();
 	public static event SoundEventHandler Taunt;
 	public static event SoundEventHandler Fall;
 
 	void Start()
 	{
-		rigidbody.centerOfMass = new Vector3(0,0,.1f);
+		rigidbody.centerOfMass = new Vector3(0,0.5f,0.1f);
 		newXRot = transform.rotation.eulerAngles.x;
 		newZRot = transform.rotation.eulerAngles.z;
 		centerY = transform.rotation.eulerAngles.y;
@@ -110,27 +112,26 @@ public class ElderlyController : MonoBehaviour
 				rigidbody.freezeRotation = false;
 				rigidbody.drag = 30;
 			}
-			if(!walker.GetComponent<WalkerController>().isOnGround &&
-			   hasWalker)
-			{
-				if (Input.GetKeyDown (KeyCode.X) &&
-				    rightFootReady)
-				{
-					rightFootReady = false;
-					rigidbody.AddRelativeForce(new Vector3(1f, 0, 1) * playerSpeed);
-					StartCoroutine(Turn(transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.y + turnRange, footCooldown));
-//					walker.transform.RotateAround(transform, y
-					StartCoroutine(RightFootCooler());
-				}
-				else if (Input.GetKeyDown (KeyCode.Z) &&
-				         leftFootReady)
-				{
-					leftFootReady = false;
-					rigidbody.AddRelativeForce(new Vector3(-1f, 0, 1) * playerSpeed);
-					StartCoroutine(Turn(transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.y - turnRange, footCooldown));
-					StartCoroutine(LeftFootCooler());
-				}
-			}
+//			if(!walker.GetComponent<WalkerController>().isOnGround &&
+//			   hasWalker)
+//			{
+//				if (Input.GetKeyDown (KeyCode.X) &&
+//				    rightFootReady)
+//				{
+//					rightFootReady = false;
+//					rigidbody.AddRelativeForce(new Vector3(1f, 0, 1) * playerSpeed);
+//					StartCoroutine(Turn(transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.y + turnRange, footCooldown));
+//					StartCoroutine(RightFootCooler());
+//				}
+//				else if (Input.GetKeyDown (KeyCode.Z) &&
+//				         leftFootReady)
+//				{
+//					leftFootReady = false;
+//					rigidbody.AddRelativeForce(new Vector3(-1f, 0, 1) * playerSpeed);
+//					StartCoroutine(Turn(transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.y - turnRange, footCooldown));
+//					StartCoroutine(LeftFootCooler());
+//				}
+//			}
 		}
 		else
 		{
@@ -216,6 +217,7 @@ public class ElderlyController : MonoBehaviour
 	void DropWalker(Transform walkerTrans)
 	{
 		if(Fall!=null) Fall();
+		ikControl.ikActive = false;
 		walker.rigidbody.freezeRotation = false;
 		hasWalker = false;
 		touchingWalker = false;

@@ -1214,6 +1214,8 @@ GameObject:
   - 23: {fileID: 2300000}
   - 114: {fileID: 11400002}
   - 114: {fileID: 11400000}
+  - 82: {fileID: 8200000}
+  - 114: {fileID: 11400006}
   m_Layer: 0
   m_Name: Box_Man_Animated
   m_TagString: Untagged
@@ -2173,7 +2175,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100158}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.46299148, y: .0594174862, z: -24.42103}
+  m_LocalPosition: {x: 5.32907295, y: .330385208, z: -23.2991562}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400156}
@@ -2224,7 +2226,7 @@ Renderer:
   - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
+  m_UseLightProbes: 1
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_SortingLayer: 0
@@ -2252,6 +2254,64 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
+--- !u!82 &8200000
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100158}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 0
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 2
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!92 &9200000
 Behaviour:
   m_ObjectHideFlags: 1
@@ -2310,6 +2370,7 @@ MonoBehaviour:
   turnRange: 10
   playerSpeed: 5000
   footCooldown: .25
+  ikControl: {fileID: 11400000}
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2328,6 +2389,44 @@ MonoBehaviour:
   zVelocity: 0
   startZ: 0
   myElder: {fileID: 0}
+--- !u!114 &11400006
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b55facf34e574495696fdbb8aa5378a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tauntSounds:
+  - {fileID: 8300000, guid: 19e45b6d51cd84789bfb48f1783f1417, type: 3}
+  - {fileID: 8300000, guid: 71621732a4239436baf3b5c3aafe7971, type: 3}
+  - {fileID: 8300000, guid: eeea094ed5e2c46b9abb8c806033b376, type: 3}
+  - {fileID: 8300000, guid: d36bba895d5244af99c33387906099f7, type: 3}
+  - {fileID: 8300000, guid: e1ea94bfcdc034c2580828649c24a8ae, type: 3}
+  - {fileID: 8300000, guid: ad4fe982596254f40a055fd0ac6b819f, type: 3}
+  liftSounds:
+  - {fileID: 8300000, guid: e76c7d72551c046eb9400228a2d5104b, type: 3}
+  - {fileID: 8300000, guid: ca2793fe86efe48d481805d0e78d0329, type: 3}
+  - {fileID: 8300000, guid: fefa5d41976064906aed0c774c2f4197, type: 3}
+  - {fileID: 8300000, guid: e2b7be3e0aabd4ab5bd2346cefeff6af, type: 3}
+  setDownSounds: []
+  fallSounds:
+  - {fileID: 8300000, guid: 6a35974aa7c874c018dcb36871013b0c, type: 3}
+  - {fileID: 8300000, guid: b523442042b154c3aa43a3b30fe2fbfb, type: 3}
+  - {fileID: 8300000, guid: bbbf00218f9c349448864cc83193e50e, type: 3}
+  - {fileID: 8300000, guid: 11660940b44c54a62811df7656c40fd9, type: 3}
+  - {fileID: 8300000, guid: 3ccf3b1d2b3f74e5a8feb7f4eb399c88, type: 3}
+  - {fileID: 8300000, guid: da6554da3a03a4d44a511a0e74d5d2d8, type: 3}
+  - {fileID: 8300000, guid: 69e11a879f60f4915b1501341f7a396b, type: 3}
+  - {fileID: 8300000, guid: 100ca619117094f12b82c6d32588c039, type: 3}
+  winSounds: []
+  loseSounds: []
+  throwSound: {fileID: 0}
+  generalSounds: []
+  pitch: 1
 --- !u!124 &12400000
 Behaviour:
   m_ObjectHideFlags: 1

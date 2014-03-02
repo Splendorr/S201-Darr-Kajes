@@ -21,6 +21,7 @@ public class ElderAudioController : MonoBehaviour
 		audio.pitch = pitch;
 		ElderlyController.Taunt += new ElderlyController.SoundEventHandler(PlayTaunt);
 		ElderlyController.Fall += new ElderlyController.SoundEventHandler(PlayFall);
+		WalkerController.Lift += new WalkerController.SoundEventHandler(PlayLift);
 	}
 
 
@@ -35,7 +36,13 @@ public class ElderAudioController : MonoBehaviour
 
 	void PlayFall()
 	{
-		audio.clip = tauntSounds[Random.Range(0,fallSounds.Length - 1)];
+		audio.clip = fallSounds[Random.Range(0,fallSounds.Length - 1)];
 		audio.Play(); 
+	}
+
+	void PlayLift()
+	{
+		audio.clip = liftSounds[Random.Range(0,liftSounds.Length - 1)];
+		audio.Play();
 	}
 }
