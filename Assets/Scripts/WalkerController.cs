@@ -28,7 +28,7 @@ public class WalkerController : MonoBehaviour
 		   !elder.GetComponent<ElderlyController>().reachLimit)
 		{
 			rigidbody.AddForce(new Vector3(0, -Physics.gravity.y * rigidbody.mass + rigidbody.drag, rigidbody.mass * 30 * Time.fixedDeltaTime));
-			newXRot = transform.rotation.eulerAngles.x - 0.15f;
+			newXRot = transform.rotation.eulerAngles.x + 0.15f;
 			transform.rotation = Quaternion.Euler(newXRot, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z);
 		}
 		else if(!isOnGround &&

@@ -10,12 +10,20 @@ public class CameraJiggle : MonoBehaviour {
 	public float yVelocity = 0.0F;
 	public float zVelocity = 0.0F;
 
-	public float startY;
+	//startY was replaced with myElder.centerY
+//	public float startY;
+
 	public float startZ;
 
+	public ElderlyController myElder;
+
+	void Awake()
+	{
+		myElder = transform.root.GetComponent<ElderlyController> ();
+	}
 
 	void Start () {
-		startY = transform.eulerAngles.y;
+//		startY = transform.eulerAngles.y;
 		startZ = transform.eulerAngles.z;
 	}
 
@@ -24,7 +32,7 @@ public class CameraJiggle : MonoBehaviour {
 		getJiggle();
 		float newRotationZ = Mathf.SmoothDamp(transform.eulerAngles.z, transform.eulerAngles.z + zRotation, ref zVelocity, smoothTime);
 		float newRotationY = Mathf.SmoothDamp(transform.eulerAngles.y, transform.eulerAngles.y + yRotation, ref yVelocity, smoothTime);
-		transform.eulerAngles = new Vector3(transform.eulerAngles.x, ClampAngle(newRotationY, startY - 10f, startY + 10f), ClampAngle(newRotationZ, startZ - 10f, startZ + 10f));
+		transform.eulerAngles = new Vector3(transform.eulerAngles.x, newRotationY, ClampAngle(newRotationZ, startZ - 10f, startZ + 10f));
 		
 	}
 
