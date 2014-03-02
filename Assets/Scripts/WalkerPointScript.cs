@@ -7,6 +7,8 @@ public class WalkerPointScript : MonoBehaviour
 
 	public bool onGround = true;
 
+	public Transform spark;
+
 	void Start()
 	{
 		walker = transform.root.GetComponent<WalkerController> ();
@@ -17,6 +19,9 @@ public class WalkerPointScript : MonoBehaviour
 		if (col.CompareTag ("floor"))
 		{
 			walker.pointsOnGround++;
+			Transform spawn;
+			spawn = (Transform)Instantiate(spark, transform.position, Quaternion.identity);
+			spawn.parent = transform;
 		}
 	}
 	void OnTriggerExit(Collider col)

@@ -97,25 +97,4 @@ public class WalkerController : MonoBehaviour
 			rigidbody.freezeRotation = false;
 		}
 	}
-
-//	void OnCollisionEnter(Collision col)
-//	{
-//		if(col.collider.CompareTag("floor") && Vector3.Angle(transform.up, Vector3.up) < 70)
-//		{
-//			isOnGround = true;
-//			if(elder.GetComponent<ElderlyController>().hasWalker)
-//			{
-//				rigidbody.freezeRotation = true;
-//			}
-//		}
-//	}
-
-//	void OnCollisionExit(Collision col)
-//	{
-//		if(col.collider.CompareTag ("floor"))
-//		{
-//			isOnGround = false;
-//			rigidbody.freezeRotation = false;
-//		}
-//	}
 }
