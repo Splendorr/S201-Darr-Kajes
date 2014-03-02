@@ -23,6 +23,12 @@ public class ElderlyController : MonoBehaviour
 
 	//FLOATS
 
+	//Keeps track of what Y rotation is the "center", mostly for the Camera Jiggle script.
+	public float centerY;
+
+	//how much elder turns with each button press
+	public float turnRange = 10.0f;
+
 	public float playerSpeed = 10.0f;
 
 	public float footCooldown = 0.0001f;
@@ -34,6 +40,7 @@ public class ElderlyController : MonoBehaviour
 		rigidbody.centerOfMass = new Vector3(0,0,.1f);
 		newXRot = transform.rotation.eulerAngles.x;
 		newZRot = transform.rotation.eulerAngles.z;
+		centerY = transform.rotation.eulerAngles.y;
 	}
 
 	void Update()
@@ -68,7 +75,7 @@ public class ElderlyController : MonoBehaviour
 				{
 					newZRot = transform.rotation.eulerAngles.z + 0.04f;
 				}
-				transform.rotation = Quaternion.Euler(newXRot, 0, newZRot);
+				transform.rotation = Quaternion.Euler(newXRot, transform.rotation.eulerAngles.y, newZRot);
 				if (Input.GetKeyDown (KeyCode.X) &&
 				    rightFootReady &&
 				    !touchingWalker)
@@ -99,16 +106,16 @@ public class ElderlyController : MonoBehaviour
 				    rightFootReady)
 				{
 					rightFootReady = false;
-					rigidbody.AddRelativeForce(new Vector3(1f, 0, 1) * (playerSpeed/2));
-					StartCoroutine(Turn(Quaternion.identity, Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y + 5, transform.rotation.eulerAngles.z), footCooldown));
+					rigidbody.AddRelativeForce(new Vector3(1f, 0, 1) * playerSpeed);
+					StartCoroutine(Turn(transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.y + turnRange, footCooldown));
 					StartCoroutine(RightFootCooler());
 				}
 				else if (Input.GetKeyDown (KeyCode.Z) &&
 				         leftFootReady)
 				{
 					leftFootReady = false;
-					rigidbody.AddRelativeForce(new Vector3(-1f, 0, 1) * (playerSpeed/2));
-					StartCoroutine(Turn(Quaternion.identity, Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y - 5, transform.rotation.eulerAngles.z), footCooldown));
+					rigidbody.AddRelativeForce(new Vector3(-1f, 0, 1) * playerSpeed);
+					StartCoroutine(Turn(transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.y - turnRange, footCooldown));
 					StartCoroutine(LeftFootCooler());
 				}
 			}
@@ -135,14 +142,22 @@ public class ElderlyController : MonoBehaviour
 		{
 			rigidbody.AddForce(new Vector3(Random.Range(-playerSpeed, playerSpeed), 0, Random.Range(-playerSpeed, playerSpeed)));
 		}
+
+		//Updates for CameraJiggle
+		centerY = transform.rotation.eulerAngles.y;
 	}
 
-	IEnumerator Turn(Quaternion start, Quaternion end, float time)
+	IEnumerator Turn(float oldY, float tarY, float time)
 	{
 		float elapsedTime = 0.0f;
 		while (elapsedTime < time)
 		{
-			transform.rotation = Quaternion.Lerp(start, end, (elapsedTime / time));
+			float curX, curZ;
+			curX = transform.rotation.eulerAngles.x;
+			curZ = transform.rotation.eulerAngles.z;
+			transform.rotation = Quaternion.Lerp(Quaternion.Euler(curX, oldY, curZ),
+			                                     Quaternion.Euler(curX, tarY, curZ),
+			                                     (elapsedTime / time));
 			elapsedTime += Time.deltaTime;
 			yield return null;
 		}
