@@ -2175,7 +2175,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100158}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.46299148, y: .0594174862, z: -24.7240162}
+  m_LocalPosition: {x: 5.32907295, y: .330385208, z: -23.2991562}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400156}
@@ -2226,7 +2226,7 @@ Renderer:
   - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
+  m_UseLightProbes: 1
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_SortingLayer: 0
@@ -2362,7 +2362,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09836b1aec52c45699e48a0e3c64ed09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walker: {fileID: 0}
+  walker: {fileID: 100010, guid: 4af478ffda1fd4804b7eeffc5256aaf2, type: 2}
   touchingWalker: 0
   hasWalker: 1
   reachLimit: 0
@@ -2370,6 +2370,7 @@ MonoBehaviour:
   turnRange: 10
   playerSpeed: 5000
   footCooldown: .25
+  ikControl: {fileID: 11400000}
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2406,7 +2407,11 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d36bba895d5244af99c33387906099f7, type: 3}
   - {fileID: 8300000, guid: e1ea94bfcdc034c2580828649c24a8ae, type: 3}
   - {fileID: 8300000, guid: ad4fe982596254f40a055fd0ac6b819f, type: 3}
-  liftSounds: []
+  liftSounds:
+  - {fileID: 8300000, guid: e76c7d72551c046eb9400228a2d5104b, type: 3}
+  - {fileID: 8300000, guid: ca2793fe86efe48d481805d0e78d0329, type: 3}
+  - {fileID: 8300000, guid: fefa5d41976064906aed0c774c2f4197, type: 3}
+  - {fileID: 8300000, guid: e2b7be3e0aabd4ab5bd2346cefeff6af, type: 3}
   setDownSounds: []
   fallSounds:
   - {fileID: 8300000, guid: 6a35974aa7c874c018dcb36871013b0c, type: 3}
