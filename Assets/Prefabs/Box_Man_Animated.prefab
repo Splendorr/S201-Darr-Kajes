@@ -1116,12 +1116,12 @@ GameObject:
   - 4: {fileID: 400146}
   - 137: {fileID: 13700012}
   m_Layer: 0
-  m_Name: pCube3
+  m_Name: Torso
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &100148
 GameObject:
   m_ObjectHideFlags: 1
@@ -2173,7 +2173,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100158}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.52321839, y: -4.50856334e-07, z: -24.5641136}
+  m_LocalPosition: {x: 2.46299148, y: .0594174862, z: -24.42103}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400156}
@@ -2308,7 +2308,7 @@ MonoBehaviour:
   reachLimit: 0
   centerY: 0
   turnRange: 10
-  playerSpeed: 1000
+  playerSpeed: 5000
   footCooldown: .25
 --- !u!114 &11400004
 MonoBehaviour:
