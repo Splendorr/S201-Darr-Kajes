@@ -2685,7 +2685,7 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1885935384}
   m_GameObject: {fileID: 1615427640}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3f019ec1a09864b6184c3a8738b2e934, type: 3}
   m_Name: 
@@ -2697,7 +2697,8 @@ MonoBehaviour:
   smoothTime: 0
   xVelocity: 0
   zVelocity: 0
-  walker: {fileID: 0}
+  walker: {fileID: 1615427640}
+  walkerController: {fileID: 0}
 --- !u!65 &1615427643
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2817,7 +2818,7 @@ Prefab:
       objectReference: {fileID: 1615427640}
     - target: {fileID: 11400002, guid: 7756f18a7b1a54c95b7fca9b49d80e1d, type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2000000, guid: 7756f18a7b1a54c95b7fca9b49d80e1d, type: 2}
       propertyPath: field of view
@@ -3034,7 +3035,7 @@ Prefab:
       objectReference: {fileID: 536576216}
     - target: {fileID: 11400000, guid: 4af478ffda1fd4804b7eeffc5256aaf2, type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: 4af478ffda1fd4804b7eeffc5256aaf2, type: 2}
       propertyPath: m_LocalScale.z
@@ -3060,6 +3061,10 @@ Prefab:
       propertyPath: m_Size.y
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 4af478ffda1fd4804b7eeffc5256aaf2, type: 2}
+      propertyPath: walker
+      value: 
+      objectReference: {fileID: 1615427640}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4af478ffda1fd4804b7eeffc5256aaf2, type: 2}
   m_RootGameObject: {fileID: 1615427640}
@@ -3131,7 +3136,7 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1616381836}
   m_GameObject: {fileID: 1934356930}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8291d4e750c40447b8422c83a3224ae8, type: 3}
   m_Name: 
@@ -3141,10 +3146,9 @@ MonoBehaviour:
   yRotation: 0
   speed: 0
   smoothTime: 0
-  xVelocity: 0
+  yVelocity: 0
   zVelocity: 0
   nextupdate: 0
-  jigCamera: {fileID: 0}
 --- !u!124 &1934356933
 Behaviour:
   m_ObjectHideFlags: 0
