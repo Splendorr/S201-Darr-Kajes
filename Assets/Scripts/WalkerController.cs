@@ -12,6 +12,12 @@ public class WalkerController : MonoBehaviour
 	public Transform backLeft;
 	public Transform backRight;
 
+	//INTS
+
+	//+1 for each of the 4 points on the ground.  needs to be 4 for the walker to be "grounded".
+	public int pointsOnGround = 0;
+
+
 	//FLOATS
 
 	public float newXRot;
@@ -77,12 +83,7 @@ public class WalkerController : MonoBehaviour
 		{
 			rigidbody.AddForce(new Vector3(0, (Physics.gravity.y * rigidbody.mass + rigidbody.drag) * 2.825f, rigidbody.mass * 20 * Time.fixedDeltaTime));
 		}
-
-	}
-
-	void OnCollisionEnter(Collision col)
-	{
-		if(col.collider.CompareTag("floor") && Vector3.Angle(transform.up, Vector3.up) < 70)
+		if(pointsOnGround >= 4)
 		{
 			isOnGround = true;
 			if(elder.GetComponent<ElderlyController>().hasWalker)
@@ -90,14 +91,31 @@ public class WalkerController : MonoBehaviour
 				rigidbody.freezeRotation = true;
 			}
 		}
-	}
-
-	void OnCollisionExit(Collision col)
-	{
-		if(col.collider.CompareTag ("floor"))
+		else
 		{
 			isOnGround = false;
 			rigidbody.freezeRotation = false;
 		}
 	}
+
+//	void OnCollisionEnter(Collision col)
+//	{
+//		if(col.collider.CompareTag("floor") && Vector3.Angle(transform.up, Vector3.up) < 70)
+//		{
+//			isOnGround = true;
+//			if(elder.GetComponent<ElderlyController>().hasWalker)
+//			{
+//				rigidbody.freezeRotation = true;
+//			}
+//		}
+//	}
+
+//	void OnCollisionExit(Collision col)
+//	{
+//		if(col.collider.CompareTag ("floor"))
+//		{
+//			isOnGround = false;
+//			rigidbody.freezeRotation = false;
+//		}
+//	}
 }
