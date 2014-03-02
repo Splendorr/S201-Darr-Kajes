@@ -99,14 +99,14 @@ public class ElderlyController : MonoBehaviour
 			    rightFootReady)
 			{
 				rightFootReady = false;
-				rigidbody.AddForce(new Vector3(1f, 0, 1) * playerSpeed);
+				rigidbody.AddRelativeForce(new Vector3(1f, 0, 1) * playerSpeed);
 				StartCoroutine(RightFootCooler());
 			}
 			else if (Input.GetKeyDown (KeyCode.Z) &&
 			         leftFootReady)
 			{
 				leftFootReady = false;
-				rigidbody.AddForce(new Vector3(-1f, 0, 1) * playerSpeed);
+				rigidbody.AddRelativeForce(new Vector3(-1f, 0, 1) * playerSpeed);
 				StartCoroutine(LeftFootCooler());
 			}
 		}
