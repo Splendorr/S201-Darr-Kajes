@@ -52,7 +52,7 @@ SubstanceImporter:
         texture: {instanceID: 0}
     - name: Sharpen
       value:
-        scalar[0]: 0
+        scalar[0]: .0189999994
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
@@ -80,7 +80,7 @@ SubstanceImporter:
         texture: {instanceID: 0}
     - name: Brightness
       value:
-        scalar[0]: .5
+        scalar[0]: .254999995
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
@@ -143,7 +143,7 @@ SubstanceImporter:
         texture: {instanceID: 0}
     - name: Normal_Strength
       value:
-        scalar[0]: 4.30000019
+        scalar[0]: 8.19999981
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
