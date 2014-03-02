@@ -540,7 +540,6 @@ GameObject:
   - 20: {fileID: 917256572}
   - 92: {fileID: 917256571}
   - 124: {fileID: 917256570}
-  - 81: {fileID: 917256569}
   - 114: {fileID: 917256568}
   m_Layer: 0
   m_Name: Camera
@@ -581,14 +580,6 @@ MonoBehaviour:
   zVelocity: 0
   nextupdate: 0
   jigCamera: {fileID: 0}
---- !u!81 &917256569
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 8100000, guid: 7756f18a7b1a54c95b7fca9b49d80e1d,
-    type: 2}
-  m_PrefabInternal: {fileID: 996497413}
-  m_GameObject: {fileID: 917256566}
-  m_Enabled: 1
 --- !u!124 &917256570
 Behaviour:
   m_ObjectHideFlags: 0
@@ -714,6 +705,46 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7756f18a7b1a54c95b7fca9b49d80e1d, type: 2}
   m_RootGameObject: {fileID: 2142307124}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
+--- !u!1001 &1016614398
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 9019d927e64494eb09b36dd061e756df, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9019d927e64494eb09b36dd061e756df, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9019d927e64494eb09b36dd061e756df, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9019d927e64494eb09b36dd061e756df, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9019d927e64494eb09b36dd061e756df, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9019d927e64494eb09b36dd061e756df, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9019d927e64494eb09b36dd061e756df, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 9019d927e64494eb09b36dd061e756df, type: 2}
+  m_RootGameObject: {fileID: 1714799833}
   m_IsPrefabParent: 0
   m_IsExploded: 1
 --- !u!1 &1019505407
@@ -888,7 +919,6 @@ GameObject:
   - 20: {fileID: 1213681387}
   - 92: {fileID: 1213681386}
   - 124: {fileID: 1213681385}
-  - 81: {fileID: 1213681384}
   - 114: {fileID: 1213681383}
   m_Layer: 0
   m_Name: Camera
@@ -929,14 +959,6 @@ MonoBehaviour:
   zVelocity: 0
   nextupdate: 0
   jigCamera: {fileID: 0}
---- !u!81 &1213681384
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 8100000, guid: b07388317e4494e07b1a7983ad93c694,
-    type: 2}
-  m_PrefabInternal: {fileID: 1851697028}
-  m_GameObject: {fileID: 1213681381}
-  m_Enabled: 1
 --- !u!124 &1213681385
 Behaviour:
   m_ObjectHideFlags: 0
@@ -1572,6 +1594,41 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1752526037}
+--- !u!1 &1714799833
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: 9019d927e64494eb09b36dd061e756df, type: 2}
+  m_PrefabInternal: {fileID: 1016614398}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1714799835}
+  - 81: {fileID: 1714799834}
+  m_Layer: 0
+  m_Name: GameWorld
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!81 &1714799834
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8100000, guid: 9019d927e64494eb09b36dd061e756df,
+    type: 2}
+  m_PrefabInternal: {fileID: 1016614398}
+  m_GameObject: {fileID: 1714799833}
+  m_Enabled: 1
+--- !u!4 &1714799835
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: 9019d927e64494eb09b36dd061e756df, type: 2}
+  m_PrefabInternal: {fileID: 1016614398}
+  m_GameObject: {fileID: 1714799833}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
 --- !u!1 &1752526033
 GameObject:
   m_ObjectHideFlags: 0
