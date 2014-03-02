@@ -12,18 +12,53 @@ public class WalkerController : MonoBehaviour
 	public Transform backLeft;
 	public Transform backRight;
 
+	//INTS
+
+	//+1 for each of the 4 points on the ground.  needs to be 4 for the walker to be "grounded".
+	public int pointsOnGround = 0;
+
+
+	//FLOATS
+
+	public float newXRot;
+
 	void FixedUpdate()
 	{
 		if(Input.GetKey(KeyCode.LeftShift) &&
-//		  transform.parent != null &&
 		   !elder.GetComponent<ElderlyController>().reachLimit)
 		{
-			rigidbody.AddRelativeForce(new Vector3(0, -Physics.gravity.y * rigidbody.mass + rigidbody.drag, rigidbody.mass * 20 * Time.fixedDeltaTime));
+			rigidbody.AddForce(new Vector3(0, -Physics.gravity.y * rigidbody.mass + rigidbody.drag, rigidbody.mass * 30 * Time.fixedDeltaTime));
+			newXRot = transform.rotation.eulerAngles.x - 0.15f;
+			transform.rotation = Quaternion.Euler(newXRot, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z);
 		}
-		else if(!isOnGround )//&&
-//		        transform.parent != null)
+		else if(!isOnGround &&
+		        elder.GetComponent<ElderlyController>().hasWalker)
 		{
-			rigidbody.AddRelativeForce(new Vector3(0, (-Physics.gravity.y * rigidbody.mass + rigidbody.drag) * .825f, rigidbody.mass * 20 * Time.fixedDeltaTime));
+			if(!elder.GetComponent<ElderlyController>().reachLimit)
+			{
+				rigidbody.AddForce(new Vector3(0, (-Physics.gravity.y * rigidbody.mass + rigidbody.drag) * .825f, rigidbody.mass * 20 * Time.fixedDeltaTime));
+			}
+			else
+			{
+				rigidbody.AddForce(new Vector3(0, (-Physics.gravity.y * rigidbody.mass + rigidbody.drag) * .825f, 0));
+			}
+
+//			rigidbody.AddForce(new Vector3(0, (-Physics.gravity.y * rigidbody.mass + rigidbody.drag) * .825f, rigidbody.mass * 20 * Time.fixedDeltaTime));
+
+			//Rights self if rotation is off
+			if(transform.rotation.eulerAngles.x > 0.0f &&
+			   transform.rotation.eulerAngles.x <= 180.0f)
+			{
+				newXRot = transform.rotation.eulerAngles.x - 0.2f;
+				transform.rotation = Quaternion.Euler(newXRot, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z);
+			}
+			if(transform.rotation.eulerAngles.x <= 360.0f &&
+			   transform.rotation.eulerAngles.x > 180.0f)
+			{
+				newXRot = transform.rotation.eulerAngles.x + 0.2f;
+				transform.rotation = Quaternion.Euler(newXRot, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z);
+			}
+
 
 			if(Input.GetKey(KeyCode.Q))
 			{
@@ -42,32 +77,45 @@ public class WalkerController : MonoBehaviour
 				rigidbody.AddForceAtPosition(new Vector3(0, .5f, 0), backRight.position);
 			}
 		}
-		else if(!isOnGround)// &&
-//		       transform.parent == null)
+
+		else if(!isOnGround &&
+		        !elder.GetComponent<ElderlyController>().hasWalker)
 		{
 			rigidbody.AddForce(new Vector3(0, (Physics.gravity.y * rigidbody.mass + rigidbody.drag) * 2.825f, rigidbody.mass * 20 * Time.fixedDeltaTime));
 		}
-
-	}
-
-	void OnCollisionEnter(Collision col)
-	{
-		if(col.collider.CompareTag("floor") && Vector3.Angle(transform.up, Vector3.up) < 70)
+		if(pointsOnGround >= 4)
 		{
 			isOnGround = true;
-			if(transform.parent != null)
+			if(elder.GetComponent<ElderlyController>().hasWalker)
 			{
 				rigidbody.freezeRotation = true;
 			}
 		}
-	}
-
-	void OnCollisionExit(Collision col)
-	{
-		if(col.collider.CompareTag ("floor"))
+		else
 		{
 			isOnGround = false;
 			rigidbody.freezeRotation = false;
 		}
 	}
+
+//	void OnCollisionEnter(Collision col)
+//	{
+//		if(col.collider.CompareTag("floor") && Vector3.Angle(transform.up, Vector3.up) < 70)
+//		{
+//			isOnGround = true;
+//			if(elder.GetComponent<ElderlyController>().hasWalker)
+//			{
+//				rigidbody.freezeRotation = true;
+//			}
+//		}
+//	}
+
+//	void OnCollisionExit(Collision col)
+//	{
+//		if(col.collider.CompareTag ("floor"))
+//		{
+//			isOnGround = false;
+//			rigidbody.freezeRotation = false;
+//		}
+//	}
 }

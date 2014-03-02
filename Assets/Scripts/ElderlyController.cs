@@ -16,7 +16,7 @@ public class ElderlyController : MonoBehaviour
 	private bool touchingWalker = false;
 
 	//Becomes false after dropping walker.
-	private bool hasWalker = true;
+	public bool hasWalker = true;
 
 	//This acivates to prevent accidentally dropping the walker.
 	public bool reachLimit = false;
@@ -51,22 +51,22 @@ public class ElderlyController : MonoBehaviour
 				if(transform.rotation.eulerAngles.x > 0.0f &&
 				   transform.rotation.eulerAngles.x <= 180.0f)
 				{
-					newXRot = transform.rotation.eulerAngles.x - 0.01f;
+					newXRot = transform.rotation.eulerAngles.x - 0.04f;
 				}
 				if(transform.rotation.eulerAngles.x <= 360.0f &&
 				   transform.rotation.eulerAngles.x > 180.0f)
 				{
-					newXRot = transform.rotation.eulerAngles.x + 0.01f;
+					newXRot = transform.rotation.eulerAngles.x + 0.04f;
 				}
 				if(transform.rotation.eulerAngles.z > 0.0f &&
 				   transform.rotation.eulerAngles.z <= 180.0f)
 				{
-					newZRot =  transform.rotation.eulerAngles.z - 0.01f;
+					newZRot =  transform.rotation.eulerAngles.z - 0.04f;
 				}
 				if(transform.rotation.eulerAngles.z <= 360.0f &&
 				   transform.rotation.eulerAngles.z > 180.0f)
 				{
-					newZRot = transform.rotation.eulerAngles.z + 0.01f;
+					newZRot = transform.rotation.eulerAngles.z + 0.04f;
 				}
 				transform.rotation = Quaternion.Euler(newXRot, 0, newZRot);
 				if (Input.GetKeyDown (KeyCode.X) &&
@@ -99,14 +99,14 @@ public class ElderlyController : MonoBehaviour
 			    rightFootReady)
 			{
 				rightFootReady = false;
-				rigidbody.AddForce(new Vector3(1f, 0, 1) * playerSpeed);
+				rigidbody.AddRelativeForce(new Vector3(1f, 0, 1) * playerSpeed);
 				StartCoroutine(RightFootCooler());
 			}
 			else if (Input.GetKeyDown (KeyCode.Z) &&
 			         leftFootReady)
 			{
 				leftFootReady = false;
-				rigidbody.AddForce(new Vector3(-1f, 0, 1) * playerSpeed);
+				rigidbody.AddRelativeForce(new Vector3(-1f, 0, 1) * playerSpeed);
 				StartCoroutine(LeftFootCooler());
 			}
 		}
@@ -152,12 +152,12 @@ public class ElderlyController : MonoBehaviour
 
 	void DropWalker(Transform walkerTrans)
 	{
-		walkerTrans.parent = null;
 		walker.rigidbody.freezeRotation = false;
 		hasWalker = false;
 		touchingWalker = false;
 		rigidbody.freezeRotation = false;
-		rigidbody.drag = 10;
+		rigidbody.drag = 0;
+		rigidbody.useGravity = true;
 		walker.rigidbody.centerOfMass = new Vector3 (0, 1, 1);
 	}
 

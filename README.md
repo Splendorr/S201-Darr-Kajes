@@ -69,10 +69,16 @@ In two-player split-screen VS. Mode, go elbow to boney elbow against a friend or
 # Notes From Talking
 
 
-## The Elders
+## Titles
+Spitballing word combinations for possible titles.
 Council of Elders
 The Elder Circuit
 Circuit of Elders
+Faceplant Hills
+The Elder Rolls
+Sepia Thunder
+Tour De (?)
+NASCAR (Old Version)
 
 
 ## Gameplay:
@@ -209,6 +215,7 @@ Riding the thing and looking down, trying to level our on each bounce
 In the Major Console Version with upgrades and progression:
 - Lighter or heavier walkers? Walkers with other features?
 - Style of Screws to hold it together?
+- Race your own ghost - there's never been a better game to include this feature.
 - Crossbones & Toupees
 
 
