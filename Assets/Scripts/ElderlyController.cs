@@ -35,6 +35,10 @@ public class ElderlyController : MonoBehaviour
 
 	float newXRot, newZRot;
 
+	public delegate void SoundEventHandler();
+	public static event SoundEventHandler Taunt;
+	public static event SoundEventHandler Fall;
+
 	void Start()
 	{
 		rigidbody.centerOfMass = new Vector3(0,0,.1f);
@@ -47,6 +51,13 @@ public class ElderlyController : MonoBehaviour
 	{
 		if(hasWalker)
 		{
+
+			if(Vector3.Angle(transform.up, Vector3.up) > 40)
+			{
+				DropWalker(this.transform);
+				return;
+			}
+
 			if(walker.GetComponent<WalkerController>().isOnGround &&
 			   hasWalker)
 			{
@@ -144,6 +155,11 @@ public class ElderlyController : MonoBehaviour
 			rigidbody.AddForce(new Vector3(Random.Range(-playerSpeed, playerSpeed), 0, Random.Range(-playerSpeed, playerSpeed)));
 		}
 
+		if(Input.GetKeyDown(KeyCode.T))
+		{
+			if(Taunt!=null) Taunt();
+		}
+
 		//Updates for CameraJiggle
 		centerY = transform.rotation.eulerAngles.y;
 	}
@@ -199,6 +215,7 @@ public class ElderlyController : MonoBehaviour
 
 	void DropWalker(Transform walkerTrans)
 	{
+		if(Fall!=null) Fall();
 		walker.rigidbody.freezeRotation = false;
 		hasWalker = false;
 		touchingWalker = false;
