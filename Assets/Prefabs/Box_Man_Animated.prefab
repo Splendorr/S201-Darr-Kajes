@@ -1116,12 +1116,12 @@ GameObject:
   - 4: {fileID: 400146}
   - 137: {fileID: 13700012}
   m_Layer: 0
-  m_Name: pCube3
+  m_Name: Torso
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &100148
 GameObject:
   m_ObjectHideFlags: 1
@@ -1132,7 +1132,7 @@ GameObject:
   - 4: {fileID: 400148}
   - 137: {fileID: 13700014}
   m_Layer: 0
-  m_Name: pCube2
+  m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2173,7 +2173,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100158}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.46299148, y: -3.0208966e-07, z: -24.5931644}
+  m_LocalPosition: {x: 2.46299148, y: .0594174862, z: -24.42103}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400156}
@@ -2303,11 +2303,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walker: {fileID: 0}
+  touchingWalker: 0
   hasWalker: 1
   reachLimit: 0
   centerY: 0
   turnRange: 10
-  playerSpeed: 1000
+  playerSpeed: 5000
   footCooldown: .25
 --- !u!114 &11400004
 MonoBehaviour:
@@ -2343,7 +2344,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: .5
+  m_Radius: .200000003
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
@@ -2359,7 +2360,7 @@ SkinnedMeshRenderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: d9ee713e4c5944011ab6220678a88dc4, type: 2}
+  - {fileID: 98629949, guid: a14e06b0a7fa4034685d65432a001b7e, type: 3}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -2735,7 +2736,7 @@ SkinnedMeshRenderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: d9ee713e4c5944011ab6220678a88dc4, type: 2}
+  - {fileID: 98629949, guid: a14e06b0a7fa4034685d65432a001b7e, type: 3}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
