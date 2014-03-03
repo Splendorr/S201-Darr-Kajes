@@ -10,7 +10,7 @@ public class GameMaster : MonoBehaviour {
 	public GameObject _walker;
 
 	public float xOffset = 0.0f;
-	public float yOffset = -0.94f;
+	public float yOffset = 0.2f;
 	public float zOffset = 0.9f;
 
 	private Vector3 _playerSpawnPointPos;		// this is the place in 3D space where the player spawns
@@ -30,11 +30,11 @@ public class GameMaster : MonoBehaviour {
 		if(singlePlayer) {
 			print("true: " + singlePlayer);
 
-			_playerSpawnPointPos = new Vector3(0.0f, 1.7f, 7.0f);
+			_playerSpawnPointPos = new Vector3(0.0f, 0.6f, 7.0f);
 			_walkerSpawnPointPos = new Vector3(xOffset, yOffset, zOffset);
 
 			_pc = (GameObject) Instantiate(_pc, transform.position, transform.rotation);
-			_walker = (GameObject)Instantiate(_walker, transform.position, transform.rotation);
+			_walker = (GameObject)Instantiate(_walker);//, transform.position, transform.rotation);
 			
 			_pc.transform.position = _playerSpawnPointPos;
 			_walkerSpawnPointPos = new Vector3(_pc.transform.position.x + xOffset, _pc.transform.position.y + yOffset, _pc.transform.position.z + zOffset);
