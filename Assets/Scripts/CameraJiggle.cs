@@ -25,10 +25,10 @@ public class CameraJiggle : MonoBehaviour {
 	void Start () {
 //		startY = transform.eulerAngles.y;
 		startZ = transform.eulerAngles.z;
+
 	}
 
 	void Update () {
-
 		getJiggle();
 		float newRotationZ = Mathf.SmoothDamp(transform.eulerAngles.z, transform.eulerAngles.z + zRotation, ref zVelocity, smoothTime);
 		float newRotationY = Mathf.SmoothDamp(transform.eulerAngles.y, transform.eulerAngles.y + yRotation, ref yVelocity, smoothTime);

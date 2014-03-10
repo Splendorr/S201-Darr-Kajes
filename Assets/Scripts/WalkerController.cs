@@ -75,19 +75,19 @@ public class WalkerController : MonoBehaviour
 
 			if(Input.GetKey(KeyCode.Q))
 			{
-				rigidbody.AddForceAtPosition(new Vector3(0, .5f, 0), frontLeft.position);
+				rigidbody.AddForceAtPosition(new Vector3(0, 2, 0), frontLeft.position);
 			}
 			if(Input.GetKey(KeyCode.E))
 			{
-				rigidbody.AddForceAtPosition(new Vector3(0, .5f, 0), frontRight.position);
+				rigidbody.AddForceAtPosition(new Vector3(0, 2, 0), frontRight.position);
 			}
 			if(Input.GetKey(KeyCode.A))
 			{
-				rigidbody.AddForceAtPosition(new Vector3(0, .5f, 0), backLeft.position);
+				rigidbody.AddForceAtPosition(new Vector3(0, 2, 0), backLeft.position);
 			}
 			if(Input.GetKey(KeyCode.D))
 			{
-				rigidbody.AddForceAtPosition(new Vector3(0, .5f, 0), backRight.position);
+				rigidbody.AddForceAtPosition(new Vector3(0, 2, 0), backRight.position);
 			}
 		}
 

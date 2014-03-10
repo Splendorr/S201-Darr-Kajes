@@ -9,8 +9,8 @@ public class MainMenu : MonoBehaviour {
 
 	void OnGUI() {
 
-		if (GUI.Button(new Rect(button1Pos.transform.position.x, button1Pos.transform.position.y, 100, 25), "Single Player")) {
-			Application.LoadLevel("SinglePlayerLevel1");
+		if (GUI.Button(new Rect( Screen.width*.1f, Screen.height*.68f, 100, 25), "Single Player")) {
+			Application.LoadLevel("FinalTesting");
 		}
 
 		/*
@@ -19,7 +19,7 @@ public class MainMenu : MonoBehaviour {
 		}
 		*/
 
-		if (GUI.Button(new Rect(buttonQuitPos.transform.position.x, buttonQuitPos.transform.position.y, 100, 25), "Quit")) {
+		if (GUI.Button(new Rect(Screen.width*.1f, Screen.height*.75f, 100, 25), "Quit")) {
 			Application.Quit();
 		}
 

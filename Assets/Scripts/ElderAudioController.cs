@@ -24,6 +24,12 @@ public class ElderAudioController : MonoBehaviour
 		WalkerController.Lift += new WalkerController.SoundEventHandler(PlayLift);
 	}
 
+	void OnDisable()
+	{
+		ElderlyController.Taunt -= new ElderlyController.SoundEventHandler(PlayTaunt);
+		ElderlyController.Fall -= new ElderlyController.SoundEventHandler(PlayFall);
+		WalkerController.Lift -= new WalkerController.SoundEventHandler(PlayLift);
+	}
 
 	void PlayTaunt()
 	{

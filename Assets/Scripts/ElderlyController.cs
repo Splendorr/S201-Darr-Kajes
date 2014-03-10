@@ -43,7 +43,7 @@ public class ElderlyController : MonoBehaviour
 
 	void Start()
 	{
-		rigidbody.centerOfMass = new Vector3(0,0.5f,0.1f);
+		rigidbody.centerOfMass = new Vector3(0,1f,0.1f);
 		newXRot = transform.rotation.eulerAngles.x;
 		newZRot = transform.rotation.eulerAngles.z;
 		centerY = transform.rotation.eulerAngles.y;
